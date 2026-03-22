@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Baba Broker</title>
+    <meta name="description"
+        content="Baba Broker – Find your dream property. Buy, sell, and rent residential & commercial real estate." />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        'primary-dark': 'var(--color-primary-dark)',
+                        'primary-light': 'var(--color-primary-light)',
+                        accent: 'var(--color-accent)',
+                        'accent-dark': 'var(--color-accent-dark)',
+                        'accent-light': 'var(--color-accent-light)',
+                        dark: 'var(--color-dark)',
+                        'dark-2': 'var(--color-dark-2)',
+                        'dark-3': 'var(--color-dark-3)',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-dark text-white font-sans">
+    <!-- Navbar Section Start -->
+    <nav id="navbar" class="py-4 px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto flex items-center justify-between relative">
+            <!-- Navbar Logo -->
+            <a href="./index.html" class="flex items-center gap-3">
+                <!-- <img src="assets/img/bb-logo.jpeg" alt="Baba Broker Logo" class="h-10 w-auto rounded-md" /> -->
+                <span class="text-xl font-bold tracking-wide">Baba <span class="text-accent">Broker</span></span>
+            </a>
+
+            <!-- Navbar Mid Menu -->
+            <ul class="hidden md:flex items-center gap-6 text-sm font-medium" id="main-nav">
+                <li><a href="./index.html" class="hover:text-accent transition-colors py-2 block">Home</a></li>
+                <li class="mega-parent" data-mega="mega-buy">
+                    <a href="#" class="mega-trigger">Buy
+                        <i class="fa-solid fa-chevron-down text-xs ml-1 mega-chevron"></i>
+                    </a>
+                </li>
+                <li class="mega-parent" data-mega="mega-rent">
+                    <a href="#" class="mega-trigger">Rent
+                        <i class="fa-solid fa-chevron-down text-xs ml-1 mega-chevron"></i>
+                    </a>
+                </li>
+                <li class="mega-parent" data-mega="mega-services">
+                    <a href="#" class="mega-trigger">Services
+                        <i class="fa-solid fa-chevron-down text-xs ml-1 mega-chevron"></i>
+                    </a>
+                </li>
+                <li class="mega-parent" data-mega="mega-resources">
+                    <a href="#" class="mega-trigger">Resources
+                        <i class="fa-solid fa-chevron-down text-xs ml-1 mega-chevron"></i>
+                    </a>
+                </li>
+
+                <li><a href="./contact-us.html" class="hover:text-accent transition-colors py-2 block">Contact</a></li>
+            </ul>
+
+            <!-- MEGA MENUS -->
+
+            <!-- Buy Mega Menu -->
+            <div class="mega-menu" id="mega-buy">
+                <div class="mega-inner gap-10">
+                    <div class="mega-promo">
+                        <p class="mega-promo-title">Find your<br>dream home</p>
+                        <p class="mega-promo-sub">Browse verified listings across top cities with zero brokerage.</p>
+                        <a href="./index.html#properties" class="mega-promo-btn">Explore Properties</a>
+                    </div>
+                    <div class="mega-content">
+                        <p class="mega-section-label">Property Types</p>
+                        <div class="mega-grid">
+                            <a href="#" class="mega-item">
+                                <i class="fa-solid fa-house"></i>
+                                <span>
+                                    <strong>Residential</strong>
+                                    <small>Apartments, Villas, Flats</small>
+                                </span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <i class="fa-solid fa-building"></i>
+                                <span>
+                                    <strong>Commercial</strong>
+                                    <small>Offices, Shops, Showrooms</small>
+                                </span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <i class="fa-solid fa-city"></i>
+                                <span>
+                                    <strong>New Projects</strong>
+                                    <small>Under-construction launches</small>
+                                </span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <i class="fa-solid fa-map"></i>
+                                <span>
+                                    <strong>Land / Plots</strong>
+                                    <small>Residential & agricultural</small>
+                                </span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>
+                                    <strong>Verified Listings</strong>
+                                    <small>RERA registered only</small>
+                                </span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                <span>
+                                    <strong>Budget Homes</strong>
+                                    <small>Under ₹50L options</small>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rent Mega Menu -->
+            <div class="mega-menu" id="mega-rent">
+                <div class="mega-inner gap-10">
+                    <div class="mega-promo">
+                        <p class="mega-promo-title">Rent with<br>confidence</p>
+                        <p class="mega-promo-sub">Tenant-verified homes. No hidden charges. Move in fast.</p>
+                        <a href="#contact" class="mega-promo-btn">Talk to an Agent</a>
+                    </div>
+                    <div class="mega-content">
+                        <p class="mega-section-label">Rental Options</p>
+                        <div class="mega-grid">
+                            <a href="#" class="mega-item"><i class="fa-solid fa-couch"></i><span><strong>Furnished
+                                        Homes</strong><small>Ready to move in</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-users"></i><span><strong>Flatmates /
+                                        PG</strong><small>Shared living spaces</small></span></a>
+                            <a href="#" class="mega-item"><i
+                                    class="fa-solid fa-building-user"></i><span><strong>Co-Living</strong><small>Community-style
+                                        rentals</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-store"></i><span><strong>Commercial
+                                        Rent</strong><small>Offices & retail spaces</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-key"></i><span><strong>Short-term
+                                        Stays</strong><small>Weekly & monthly leases</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-file-contract"></i><span><strong>Rental
+                                        Agreement</strong><small>Legal drafting support</small></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Mega Menu -->
+            <div class="mega-menu" id="mega-services">
+                <div class="mega-inner g-10">
+                    <div class="mega-promo">
+                        <p class="mega-promo-title">End-to-end<br>real estate help</p>
+                        <p class="mega-promo-sub">From search to registration — we handle everything for you.</p>
+                        <a href="./index.html#services" class="mega-promo-btn">View All Services</a>
+                    </div>
+                    <div class="mega-content">
+                        <p class="mega-section-label">Our Services</p>
+                        <div class="mega-grid">
+                            <a href="#" class="mega-item"><i class="fa-solid fa-handshake"></i><span><strong>Property
+                                        Buying</strong><small>Guided end-to-end</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-tag"></i><span><strong>Property
+                                        Selling</strong><small>Best market valuation</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-chart-pie"></i><span><strong>Investment
+                                        Advisory</strong><small>Data-driven ROI plans</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-file-contract"></i><span><strong>Legal &
+                                        Docs</strong><small>Title check & agreements</small></span></a>
+                            <a href="#" class="mega-item"><i
+                                    class="fa-solid fa-house-circle-check"></i><span><strong>Property
+                                        Mgmt</strong><small>Maintenance & tenants</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-headset"></i><span><strong>24/7
+                                        Support</strong><small>Always here for you</small></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Mega Menu -->
+            <div class="mega-menu" id="mega-resources">
+                <div class="mega-inner g-10">
+                    <div class="mega-promo">
+                        <p class="mega-promo-title">Knowledge<br>is power</p>
+                        <p class="mega-promo-sub">Guides, tools and market insights to help you decide smarter.</p>
+                        <a href="./index.html#blog" class="mega-promo-btn">Read Our Blog</a>
+                    </div>
+                    <div class="mega-content">
+                        <p class="mega-section-label">Resources</p>
+                        <div class="mega-grid">
+                            <a href="#" class="mega-item"><i class="fa-solid fa-newspaper"></i><span><strong>Blog &
+                                        News</strong><small>Market trends & tips</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-calculator"></i><span><strong>EMI
+                                        Calculator</strong><small>Plan your finances</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-map-location-dot"></i><span><strong>City
+                                        Guides</strong><small>Locality insights</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-scale-balanced"></i><span><strong>RERA
+                                        Guide</strong><small>Know your rights</small></span></a>
+                            <a href="#" class="mega-item"><i
+                                    class="fa-solid fa-circle-question"></i><span><strong>FAQs</strong><small>Common
+                                        buyer queries</small></span></a>
+                            <a href="#" class="mega-item"><i class="fa-solid fa-video"></i><span><strong>Video
+                                        Tours</strong><small>Virtual property walks</small></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar Right Menu -->
+            <div class="flex items-center gap-3">
+                <a href="./index.html#services"
+                    class="nav-btn-ai hidden md:inline-flex items-center gap-2 text-sm font-semibold">
+                    <i class="fa-solid fa-star"></i> Ai Services
+                </a>
+                <a href="javascript:void(0)" onclick="openQuoteModal()"
+                    class="nav-btn-quote hidden md:inline-flex items-center gap-2 text-sm font-semibold">
+                    Get a Quote
+                </a>
+                <a href="#contact" class="nav-btn-hire hidden md:inline-flex items-center gap-2 text-sm font-semibold">
+                    Hire Us
+                </a>
+                <div class="phone-dropdown-wrap hidden md:inline-flex">
+                    <button class="nav-btn-icon items-center justify-center">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </button>
+                    <div class="phone-dropdown-card">
+                        <div class="phone-dropdown-header">
+                            <span class="phone-dropdown-line"></span>
+                            <span class="phone-dropdown-title">Get In Touch</span>
+                        </div>
+                        <p class="phone-dropdown-group">Baba Broker Sales Team</p>
+                        <a href="tel:+911800000000" class="phone-dropdown-item">
+                            <span class="phone-dropdown-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span><small>Phone</small><strong>+91 1800 000 000</strong></span>
+                        </a>
+                        <a href="https://wa.me/919586505111" class="phone-dropdown-item">
+                            <span class="phone-dropdown-icon" style="color:#25d366;"><i
+                                    class="fa-brands fa-whatsapp"></i></span>
+                            <span><small>WhatsApp</small><strong>+91 95865 05111</strong></span>
+                        </a>
+                        <a href="mailto:sales@bababroker.com" class="phone-dropdown-item">
+                            <span class="phone-dropdown-icon" style="color:#F68122;"><i
+                                    class="fa-solid fa-envelope"></i></span>
+                            <span><small>Email</small><strong>sales@bababroker.com</strong></span>
+                        </a>
+                        <p class="phone-dropdown-group">Baba Broker Support</p>
+                        <a href="mailto:info@bababroker.com" class="phone-dropdown-item">
+                            <span class="phone-dropdown-icon" style="color:#F68122;"><i
+                                    class="fa-solid fa-envelope"></i></span>
+                            <span><small>Email</small><strong>info@bababroker.com</strong></span>
+                        </a>
+                    </div>
+                </div>
+                <button id="menu-btn" class="nav-btn-icon flex items-center justify-center">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden mt-3 bg-dark-2 rounded-xl overflow-hidden text-sm font-medium">
+
+            <!-- Mobile nav items -->
+            <a href="./index.html" class="mob-link">Home</a>
+
+            <!-- Buy accordion -->
+            <div class="mob-accordion">
+                <button class="mob-link mob-acc-trigger" onclick="toggleMobAcc(this)">
+                    Buy <i class="fa-solid fa-chevron-down mob-acc-icon"></i>
+                </button>
+                <div class="mob-acc-panel">
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-house text-accent"></i> Residential</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-building text-accent"></i> Commercial</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-city text-accent"></i> New Projects</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-map text-accent"></i> Land / Plots</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-shield-halved text-accent"></i> Verified
+                        Listings</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-indian-rupee-sign text-accent"></i> Budget
+                        Homes</a>
+                </div>
+            </div>
+
+            <!-- Rent accordion -->
+            <div class="mob-accordion">
+                <button class="mob-link mob-acc-trigger" onclick="toggleMobAcc(this)">
+                    Rent <i class="fa-solid fa-chevron-down mob-acc-icon"></i>
+                </button>
+                <div class="mob-acc-panel">
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-couch text-accent"></i> Furnished Homes</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-users text-accent"></i> Flatmates / PG</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-building-user text-accent"></i> Co-Living</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-store text-accent"></i> Commercial Rent</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-key text-accent"></i> Short-term Stays</a>
+                    <a href="#" class="mob-sub-link"><i class="fa-solid fa-file-contract text-accent"></i> Rental
+                        Agreement</a>
+                </div>
+            </div>
+
+            <!-- Services accordion -->
+            <div class="mob-accordion">
+                <button class="mob-link mob-acc-trigger" onclick="toggleMobAcc(this)">
+                    Services <i class="fa-solid fa-chevron-down mob-acc-icon"></i>
+                </button>
+                <div class="mob-acc-panel">
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-handshake text-accent"></i> Property Buying
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-tag text-accent"></i> Property Selling
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-chart-pie text-accent"></i> Investment Advisory
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-file-contract text-accent"></i> Legal & Docs
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-house-circle-check text-accent"></i> Property Mgmt
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-headset text-accent"></i> 24/7 Support
+                    </a>
+                </div>
+            </div>
+
+            <!-- Resources accordion -->
+            <div class="mob-accordion">
+                <button class="mob-link mob-acc-trigger" onclick="toggleMobAcc(this)">
+                    Resources <i class="fa-solid fa-chevron-down mob-acc-icon"></i>
+                </button>
+                <div class="mob-acc-panel">
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-newspaper text-accent"></i> Blog & News
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-calculator text-accent"></i> EMI Calculator
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-map-location-dot text-accent"></i> City Guides
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-scale-balanced text-accent"></i> RERA Guide
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-circle-question text-accent"></i> FAQs
+                    </a>
+                    <a href="#" class="mob-sub-link">
+                        <i class="fa-solid fa-video text-accent"></i> Video Tours
+                    </a>
+                </div>
+            </div>
+
+            <a href="./contact-us.html" class="mob-link">Contact</a>
+
+            <!-- CTA buttons -->
+            <div class="p-4 pt-2 flex flex-col gap-2">
+                <a href="javascript:void(0)" onclick="openQuoteModal()"
+                    class="nav-btn-quote w-full text-center justify-center text-sm font-semibold py-2.5 rounded-lg">
+                    Get a Quote
+                </a>
+                <a href="#contact"
+                    class="nav-btn-hire w-full text-center justify-center text-sm font-semibold py-2.5 rounded-lg">
+                    Hire Us
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="contact-hero-section">
+        <!-- Top-left: Facebook -->
+        <div class="ch-chip ch-chip--tl1">
+            <a href="javascript:void()">
+                <span class="ch-chip-icon" style="background:#1877f2;">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+
+        <!-- Left: Phone 1 -->
+        <div class="ch-chip ch-chip--ml1">
+            <a href="javascript:void()" class="inline-flex gap-2">
+                <span class="ch-chip-icon" style="background:#333;"><i class="fa-solid fa-phone"></i></span>
+                <span class="ch-chip-text mt-1.5">+91 90050 50533</span>
+            </a>
+        </div>
+
+        <!-- Left: WhatsApp -->
+        <div class="ch-chip ch-chip--bl1">
+            <a href="javascript:void()" class="ch-chip ch-chip--bl1">
+                <span class="ch-chip-icon" style="background:#25d366;"><i class="fa-brands fa-whatsapp"></i></span>
+                <span class="ch-chip-text">+91 95865 05111</span>
+            </a>
+        </div>
+
+        <!-- Top-right: Pinterest -->
+        <div class="ch-chip ch-chip--tr1">
+            <a href="javascript:void()">
+                <span class="ch-chip-icon" style="background:#e60023;">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </span>
+            </a>
+        </div>
+
+        <!-- Right: Email 1 -->
+        <div class="ch-chip ch-chip--mr1">
+            <a href="javascript:void()" class="inline-flex gap-2">
+                <span class="ch-chip-icon" style="background:#333;"><i class="fa-solid fa-envelope"></i></span>
+                <span class="ch-chip-text mt-1.5">sales@bababroker.com</span>
+            </a>
+        </div>
+
+        <!-- Right: Email 2 -->
+        <div class="ch-chip ch-chip--br1">
+            <a href="javascript:void()" class="inline-flex gap-2">
+                <span class="ch-chip-icon" style="background:#333;"><i class="fa-solid fa-envelope"></i></span>
+                <span class="ch-chip-text mt-1.5">info@bababroker.com</span>
+            </a>
+        </div>
+
+        <!-- Mid-left: X / Twitter -->
+        <div class="ch-chip ch-chip--x">
+            <a href="javascript:void()">
+                <span class="ch-chip-icon" style="background:#000;"><i class="fa-brands fa-x-twitter"></i></span>
+            </a>
+        </div>
+
+        <!-- Mid-right: LinkedIn -->
+        <div class="ch-chip ch-chip--li">
+            <a href="javascript:void()">
+                <span class="ch-chip-icon" style="background:#0a66c2;"><i class="fa-brands fa-linkedin-in"></i></span>
+            </a>
+        </div>
+
+        <!-- Center content -->
+        <div class="ch-center">
+            <h1 class="ch-title">Contact <span class="text-accent">us</span></h1>
+            <div class="ch-dot-icon"><i class="fa-regular fa-circle-dot"></i></div>
+            <p class="ch-sub">Let's talk about your next property. Submit your request via the contact form,
+                <br class="hidden sm:block"> and we'll respond as soon as possible.
+            </p>
+        </div>
+
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Contact us Section Start -->
+    <section class="section contact-blog-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+                <!-- Left: Contact Details -->
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+                        How can we <span class="text-accent">help you?</span>
+                    </h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                        Baba Broker is a trusted real estate service provider in India, with a proven track record in
+                        property buying, selling, rental management, investment advisory, and legal documentation
+                        services. We deliver exceptional customer service to clients across the country.
+                    </p>
+
+                    <!-- Timeline -->
+                    <div class="cd-timeline">
+
+                        <!-- Address -->
+                        <div class="cd-item">
+                            <div class="cd-dot"></div>
+                            <div class="cd-body">
+                                <h5 class="cd-label">Address</h5>
+                                <p class="cd-text">F-47, 1st Floor, Milap Nagar, Uttam Nagar,<br>New Delhi – 110059</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="cd-item">
+                            <div class="cd-dot"></div>
+                            <div class="cd-body">
+                                <h5 class="cd-label">Contact Information</h5>
+                                <p class="cd-text"><a href="mailto:info@bababroker.com">info@bababroker.com</a></p>
+                                <p class="cd-text"><a href="mailto:sales@bababroker.com">sales@bababroker.com</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="cd-item">
+                            <div class="cd-dot"></div>
+                            <div class="cd-body">
+                                <h5 class="cd-label">Phone</h5>
+                                <p class="cd-text"><a href="tel:+911800000000">+91 1800 000 000</a></p>
+                                <p class="cd-text"><a href="tel:+919586505111">+91 95865 05111</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Social -->
+                        <div class="cd-item cd-item--last">
+                            <div class="cd-dot"></div>
+                            <div class="cd-body">
+                                <h5 class="cd-label">Social</h5>
+                                <div class="cd-socials">
+                                    <a href="#" class="cd-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="cd-social-btn"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#" class="cd-social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="#" class="cd-social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#" class="cd-social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-1">Contact
+                        <span class="text-accent">Us</span>
+                    </h2>
+                    <p class="text-accent font-medium mb-1">Apply to get a call for solution</p>
+                    <p class="text-gray-400 text-sm mb-6">Submit the form to connect with our property expert —
+                        completely free.</p>
+
+                    <div class="card space-y-4">
+
+                        <div class="flex rounded-xl overflow-hidden border border-white/10">
+                            <span class="bg-primary px-4 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user text-white"></i>
+                            </span>
+                            <input type="text" placeholder="Your Name"
+                                class="flex-1 bg-dark-3 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 min-w-0" />
+                        </div>
+
+                        <div class="flex rounded-xl overflow-hidden border border-white/10">
+                            <span class="bg-primary px-4 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope text-white"></i>
+                            </span>
+                            <input type="email" placeholder="Your Email"
+                                class="flex-1 bg-dark-3 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 min-w-0" />
+                        </div>
+
+                        <div class="flex rounded-xl overflow-hidden border border-white/10">
+                            <span class="bg-primary px-4 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone text-white"></i>
+                            </span>
+                            <input type="tel" placeholder="Your Phone Number"
+                                class="flex-1 bg-dark-3 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 min-w-0" />
+                        </div>
+
+                        <div>
+                            <h6 class="font-semibold text-base mb-3">What Can We Do For You?</h6>
+                            <div class="overflow-hidden pb-1">
+                                <div class="service-tag-track">
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-house text-accent"></i>
+                                        Property Buying
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-tag text-accent"></i>
+                                        Property Selling
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-key text-accent"></i>
+                                        Rental Management
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-chart-pie text-accent"></i>
+                                        Investment Advisory
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-house text-accent"></i>
+                                        Property Buying
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-tag text-accent"></i>
+                                        Property Selling
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-key text-accent"></i>
+                                        Rental Management
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-chart-pie text-accent"></i>
+                                        Investment Advisory
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex rounded-xl overflow-hidden border border-white/10">
+                            <span class="bg-primary px-4 flex items-start justify-center pt-3 shrink-0">
+                                <i class="fa-solid fa-comment text-white"></i>
+                            </span>
+                            <textarea rows="4" placeholder="Your Message"
+                                class="flex-1 bg-dark-3 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 resize-none min-w-0"></textarea>
+                        </div>
+
+                        <div class="text-center sm:text-right">
+                            <button type="submit" class="btn btn-accent px-8 rounded-full font-semibold">
+                                Submit <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Contact us Section End -->
+
+    <!-- Map and Branch Section Start -->
+    <section class="map-branch-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Heading -->
+            <div class="text-center mb-8">
+                <span class="text-accent text-xs font-semibold uppercase tracking-widest">Find Us</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Our <span class="text-accent">Branches</span>
+                </h2>
+                <p class="text-gray-400 text-sm mt-2">Visit us at any of our offices across India</p>
+            </div>
+
+            <!-- City Tab Pills -->
+            <div class="branch-tabs" id="branchTabs">
+                <button class="branch-tab active" onclick="switchBranch(this,'delhi')">Delhi</button>
+                <button class="branch-tab" onclick="switchBranch(this,'mumbai')">Mumbai</button>
+                <button class="branch-tab" onclick="switchBranch(this,'bangalore')">Bangalore</button>
+                <button class="branch-tab" onclick="switchBranch(this,'pune')">Pune</button>
+                <button class="branch-tab" onclick="switchBranch(this,'hyderabad')">Hyderabad</button>
+            </div>
+
+            <!-- Tab Panels -->
+            <div class="branch-panels">
+
+                <!-- Delhi -->
+                <div class="branch-panel active" id="branch-delhi">
+                    <div class="branch-grid">
+                        <div class="branch-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.241143203265!2d77.0610849150824!3d28.622533982421768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d051abe653731%3A0xfed8dba69ec6b4da!2sTKNOCKS%20TECHNICAL%20SERVICES%20Pvt.LTD.!5e0!3m2!1sen!2sin!4v1670233249668!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="branch-info">
+                            <h4 class="branch-city-title">Branches in <span class="text-accent">Delhi</span></h4>
+                            <p class="branch-desc">Baba Broker's Delhi office serves the NCR region with expert property
+                                consultants helping you buy, sell, and rent with complete transparency.</p>
+                            <div class="branch-detail-block">
+                                <h5 class="branch-area-name">Uttam Nagar, New Delhi</h5>
+                                <p class="branch-address">
+                                    <i class="fa-solid fa-location-dot text-accent"></i>
+                                    F-47, 1st Floor, Milap Nagar,<br>
+                                    Uttam Nagar, New Delhi – 110059
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-phone text-accent"></i>
+                                    <a href="tel:+911800000000">+91 1800 000 000</a>
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-envelope text-accent"></i>
+                                    <a href="mailto:delhi@bababroker.com">delhi@bababroker.com</a>
+                                </p>
+                            </div>
+                            <a href="#contact" class="branch-enquire-btn">Enquire Now <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mumbai -->
+                <div class="branch-panel" id="branch-mumbai">
+                    <div class="branch-grid">
+                        <div class="branch-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="branch-info">
+                            <h4 class="branch-city-title">Branches in <span class="text-accent">Mumbai</span></h4>
+                            <p class="branch-desc">Our Mumbai office covers Andheri, Bandra, Thane and Navi Mumbai —
+                                helping clients navigate one of India's most dynamic property markets.</p>
+                            <div class="branch-detail-block">
+                                <h5 class="branch-area-name">Andheri West, Mumbai</h5>
+                                <p class="branch-address">
+                                    <i class="fa-solid fa-location-dot text-accent"></i>
+                                    Office 12, Sai Complex, Andheri West,<br>
+                                    Mumbai – 400058
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-phone text-accent"></i>
+                                    <a href="tel:+911800000001">+91 1800 000 001</a>
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-envelope text-accent"></i>
+                                    <a href="mailto:mumbai@bababroker.com">mumbai@bababroker.com</a>
+                                </p>
+                            </div>
+                            <a href="#contact" class="branch-enquire-btn">Enquire Now
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bangalore -->
+                <div class="branch-panel" id="branch-bangalore">
+                    <div class="branch-grid">
+                        <div class="branch-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.99710191956!2d77.35074421903857!3d12.95428023956427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000001"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="branch-info">
+                            <h4 class="branch-city-title">Branches in <span class="text-accent">Bangalore</span></h4>
+                            <p class="branch-desc">Serving Whitefield, Koramangala, HSR Layout and Electronic City —
+                                Bangalore's top tech corridors for residential and commercial properties.</p>
+                            <div class="branch-detail-block">
+                                <h5 class="branch-area-name">Koramangala, Bangalore</h5>
+                                <p class="branch-address">
+                                    <i class="fa-solid fa-location-dot text-accent"></i>
+                                    3rd Block, Koramangala,<br>
+                                    Bangalore – 560034
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-phone text-accent"></i>
+                                    <a href="tel:+911800000002">+91 1800 000 002</a>
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-envelope text-accent"></i>
+                                    <a href="mailto:bangalore@bababroker.com">bangalore@bababroker.com</a>
+                                </p>
+                            </div>
+                            <a href="#contact" class="branch-enquire-btn">Enquire Now
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pune -->
+                <div class="branch-panel" id="branch-pune">
+                    <div class="branch-grid">
+                        <div class="branch-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242201.2435729849!2d73.72788787890625!3d18.524824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000002"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="branch-info">
+                            <h4 class="branch-city-title">Branches in <span class="text-accent">Pune</span></h4>
+                            <p class="branch-desc">Our Pune office covers Hinjewadi, Wakad, Baner and Kharadi — the
+                                fastest-growing IT and residential corridors in the city.</p>
+                            <div class="branch-detail-block">
+                                <h5 class="branch-area-name">Baner, Pune</h5>
+                                <p class="branch-address">
+                                    <i class="fa-solid fa-location-dot text-accent"></i>
+                                    Office 5, Baner Road,<br>
+                                    Pune – 411045
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-phone text-accent"></i>
+                                    <a href="tel:+911800000003">+91 1800 000 003</a>
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-envelope text-accent"></i>
+                                    <a href="mailto:pune@bababroker.com">pune@bababroker.com</a>
+                                </p>
+                            </div>
+                            <a href="#contact" class="branch-enquire-btn">Enquire Now
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hyderabad -->
+                <div class="branch-panel" id="branch-hyderabad">
+                    <div class="branch-grid">
+                        <div class="branch-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243684.54913023758!2d78.24323145!3d17.412608699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000003"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="branch-info">
+                            <h4 class="branch-city-title">Branches in <span class="text-accent">Hyderabad</span></h4>
+                            <p class="branch-desc">Covering HITEC City, Gachibowli, Kondapur and Jubilee Hills —
+                                Hyderabad's premium residential and commercial property zones.</p>
+                            <div class="branch-detail-block">
+                                <h5 class="branch-area-name">HITEC City, Hyderabad</h5>
+                                <p class="branch-address">
+                                    <i class="fa-solid fa-location-dot text-accent"></i>
+                                    Plot 22, HITEC City,<br>
+                                    Hyderabad – 500081
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-phone text-accent"></i>
+                                    <a href="tel:+911800000004">+91 1800 000 004</a>
+                                </p>
+                                <p class="branch-contact">
+                                    <i class="fa-solid fa-envelope text-accent"></i>
+                                    <a href="mailto:hyderabad@bababroker.com">hyderabad@bababroker.com</a>
+                                </p>
+                            </div>
+                            <a href="#contact" class="branch-enquire-btn">Enquire Now
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Map and Branch Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="relative pt-24 text-white" style="background:#070E13;">
+
+        <!-- Newsletter Bar -->
+        <div class="absolute top-0 left-0 right-0 -translate-y-1/2 px-4 z-99">
+            <div class="max-w-4xl mx-auto rounded-2xl px-4 sm:px-6 py-5" style="background:#0B4E9D;">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="text-center sm:text-left">
+                        <p class="font-semibold text-base tracking-wide">
+                            Stay up to date with the latest listings!
+                        </p>
+                        <p class="text-sm text-white/70 mt-0.5">
+                            Subscribe with your email and never miss a property deal. 👍
+                        </p>
+                    </div>
+                    <div
+                        class="flex items-center bg-white rounded-full overflow-hidden w-full sm:w-auto sm:min-w-[300px]">
+                        <input type="email" placeholder="Enter Your Email"
+                            class="flex-1 px-4 py-2 text-sm text-gray-800 focus:outline-none bg-transparent min-w-0" />
+                        <button class="btn btn-accent rounded-full px-4 py-2 text-sm m-1 whitespace-nowrap">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer Body -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Top: Logo + columns -->
+            <div class="border-b border-gray-700">
+
+                <!-- Logo -->
+                <div class="mb-6">
+                    <img src="assets/img/bb-logo.jpeg" alt="Baba Broker" class="h-20 rounded-md" />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Col 1: About -->
+                    <div class="lg:border-r lg:border-gray-700 lg:pr-6">
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Baba Broker is your trusted real estate partner — helping you buy, sell, and rent
+                            residential &amp; commercial properties with complete transparency.
+                        </p>
+                        <p class="mt-5 mb-3 text-sm font-semibold text-gray-300">About Baba Broker</p>
+                        <a href="./index.html#about"
+                            class="btn btn-primary text-sm py-2 px-3 inline-flex items-center gap-2 rounded-md">
+                            <img src="./assets/img/call-request.png" alt="call-request" class="w-10">
+                            Request A Callback
+                        </a>
+                    </div>
+
+                    <!-- Col 2: Useful Links -->
+                    <div class="lg:px-6">
+                        <h5 class="font-semibold text-sm mb-3 pl-3 border-l-4 border-accent">
+                            Useful <span class="text-accent">Links</span>
+                        </h5>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>
+                                <a href="./index.html"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./index.html#properties"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> Properties
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./about-us.html"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./contact-us.html"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Our Service -->
+                    <div class="lg:border-r lg:border-gray-700 lg:px-6">
+                        <h5 class="font-semibold text-sm mb-3 pl-3 border-l-4 border-accent">
+                            Our <span class="text-accent">Services</span>
+                        </h5>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>
+                                <a href="./index.html#services"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> Property Buying
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./index.html#services"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> Property Selling
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./index.html#services"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> Rental Management
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./index.html#services"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> Investment Advisory
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./index.html#services"
+                                    class="hover:text-accent transition-colors flex items-center gap-1">
+                                    <span class="text-accent text-lg leading-none">»</span> Legal &amp; Documentation
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Col 2 + Col 3 : Pay Online -->
+                        <div class="mt-5 py-3 lg:border-t border-gray-700 lg:ml-[-154%]">
+                            <p class="text-sm font-semibold mb-2">Pay <span class="text-accent">Online</span></p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="javascript:void()">
+                                    <img src="./assets/img/visa.jpg" alt="visa" class="w-12 rounded">
+                                </a>
+                                <a href="javascript:void()">
+                                    <img src="./assets/img/apppay.jpg" alt="apppay" class="w-12 rounded">
+                                </a>
+                                <a href="javascript:void()">
+                                    <img src="./assets/img/rupay.jpg" alt="rupay" class="w-12 rounded">
+                                </a>
+                                <a href="javascript:void()">
+                                    <img src="./assets/img/paytm.jpg" alt="paytm" class="w-12 rounded">
+                                </a>
+                                <a href="javascript:void()">
+                                    <img src="./assets/img/phonepay.jpg" alt="phonepay" class="w-12 rounded">
+                                </a>
+                                <a href="javascript:void()">
+                                    <img src="./assets/img/gpay.jpg" alt="gpay" class="w-12 rounded">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Col 4: Contact -->
+                    <div>
+                        <h5 class="font-semibold text-sm mb-3 pl-3 border-l-4 border-accent">
+                            Our <span class="text-accent">Contact</span>
+                        </h5>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-location-dot text-accent mt-0.5 w-4 shrink-0"></i>
+                                123 Property Lane, Real Estate City – 110059
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-phone text-accent w-4 shrink-0"></i>
+                                <a href="tel: +91-9155643043" class="hover:text-accent transition-colors">
+                                    +1 (800) 000-0000
+                                </a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-envelope text-accent w-4 shrink-0"></i>
+                                <a href="mailto:info@bababroker.com" class="hover:text-accent transition-colors">
+                                    info@bababroker.com
+                                </a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-brands fa-skype text-accent w-4 shrink-0"></i>
+                                <a href="javascript:void()" class="hover:text-accent transition-colors">
+                                    bababroker.skype
+                                </a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-clock text-accent w-4 shrink-0"></i>
+                                Mon–Sat: 9am – 7pm
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Important Disclaimer -->
+            <div class="my-5 flex md:flex-row flex-col bg-gray-700/50 ring-1 ring-gray-500/50 p-5 rounded-2xl shadow">
+                <div class="mr-3">
+                    <i class="fas fa-triangle-exclamation text-accent p-3 bg-sky-200/10 rounded-md"></i>
+                </div>
+                <div>
+                    <p class="mb-3 text-accent font-bold text-xl">Important Disclaimer</p>
+                    <p class="text-xs text-justify text-gray-400 mb-3">
+                        <span class="font-bold tracking-wider">Investment Risk Warning: </span>
+                        Investment Risk Warning: Investing in real estate through VENQ involves substantial risk,
+                        including the possible loss of principal. Past performance does not guarantee future results.
+                        Property values can fluctuate, and rental income is not guaranteed. Investments are illiquid and
+                        meant to be held for the full term.
+                    </p>
+                    <p class="text-xs text-justify text-gray-400 mb-3">
+                        <span class="font-bold tracking-wider">Investment Risk Warning: </span>
+                        Investment Risk Warning: Investing in real estate through VENQ involves substantial risk,
+                        including the possible loss of principal. Past performance does not guarantee future results.
+                        Property values can fluctuate, and rental income is not guaranteed. Investments are illiquid and
+                        meant to be held for the full term.
+                    </p>
+                    <p class="text-xs text-justify text-gray-400">
+                        <span class="font-bold tracking-wider">Investment Risk Warning: </span>
+                        Investment Risk Warning: Investing in real estate through VENQ involves substantial risk,
+                        including the possible loss of principal. Past performance does not guarantee future results.
+                        Property values can fluctuate, and rental income is not guaranteed. Investments are illiquid and
+                        meant to be held for the full term.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Row -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 border-y border-gray-700 text-center sm:text-left">
+                <div class="border-gray-700 bg-gray-800/50 p-4 rounded-xl">
+                    <i class="fas fa-globe mb-2 text-xl"></i>
+                    <h6 class="text-accent text-xs font-semibold uppercase tracking-wider mb-1">Global Reach</h6>
+                    <p class="text-gray-500 text-xs">Serving investors worldwide</p>
+                </div>
+                <div class="border-gray-700 bg-gray-800/50 p-4 rounded-xl">
+                    <i class="fas fa-globe mb-2 text-xl"></i>
+                    <h6 class="text-accent text-xs font-semibold uppercase tracking-wider mb-1">Secure Platform</h6>
+                    <p class="text-gray-500 text-xs">Bank-level encryption</p>
+                </div>
+                <div class="border-gray-700 bg-gray-800/50 p-4 rounded-xl">
+                    <i class="fas fa-globe mb-2 text-xl"></i>
+                    <h6 class="text-accent text-xs font-semibold uppercase tracking-wider mb-1">Transparent</h6>
+                    <p class="text-gray-500 text-xs">Full disclosure & reporting</p>
+                </div>
+                <div class="border-gray-700 bg-gray-800/50 p-4 rounded-xl">
+                    <i class="fas fa-globe mb-2 text-xl"></i>
+                    <h6 class="text-accent text-xs font-semibold uppercase tracking-wider mb-1">Expert Managed</h6>
+                    <p class="text-gray-500 text-xs">Professional oversight</p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div
+                class="flex flex-col sm:flex-row justify-between items-center gap-2 py-4 text-xs text-gray-500 text-center sm:text-left">
+                <p>Copyright &copy; 2025–2026 Baba Broker Pvt Ltd. | All rights reserved</p>
+                <p class="flex flex-wrap gap-3 justify-center sm:justify-end">
+                    <a href="#" class="hover:text-accent transition-colors">Privacy &amp; Policy</a>
+                    <a href="#" class="hover:text-accent transition-colors">Terms &amp; Use</a>
+                    <a href="#" class="hover:text-accent transition-colors">Refund &amp; Cancellation</a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Bottom thick accent border -->
+        <div class="h-1 w-[71.5%] mx-auto" style="background: var(--color-accent);"></div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Welcome Promo Popup -->
+    <div id="promoModal" class="promo-overlay" onclick="closePromoOutside(event)">
+        <div class="promo-box">
+            <button class="promo-close" onclick="closePromo()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="promo-img-panel">
+                <div class="promo-img-inner">
+                    <div class="promo-img-placeholder">
+                        <i class="fa-solid fa-building text-white/20" style="font-size:5rem;"></i>
+                    </div>
+                    <div class="promo-img-badge">
+                        <p class="promo-badge-title">Your Final <span>Opportunity</span></p>
+                        <p class="promo-badge-sub">To own before it's too late</p>
+                    </div>
+                    <div class="promo-offer-bar">
+                        <p class="promo-offer-title"><i class="fa-solid fa-tag"></i> Spot Booking Offer</p>
+                        <p class="promo-offer-sub">Available on every booking — Offer valid till 31st March, 2026</p>
+                    </div>
+                </div>
+            </div>
+            <div class="promo-detail-panel">
+                <div class="promo-brand">
+                    <span class="promo-brand-icon"><i class="fa-solid fa-building-columns"></i></span>
+                    <span class="promo-brand-name">Baba <span class="text-accent">Broker</span></span>
+                </div>
+                <h2 class="promo-property-name">Premium <span class="text-accent">Properties</span><br>Across India</h2>
+                <p class="promo-property-loc"><i class="fa-solid fa-location-dot text-accent"></i> Delhi NCR &amp; Major
+                    Cities</p>
+                <p class="promo-property-desc">Homes designed to give more back to life's little luxuries. Verified
+                    listings, zero hidden charges.</p>
+                <div class="promo-stats">
+                    <div class="promo-stat">
+                        <strong>2 &amp; 3 BHK</strong>
+                        <small>Starting at ₹45L+</small>
+                    </div>
+                    <div class="promo-stat-divider"></div>
+                    <div class="promo-stat">
+                        <strong>RERA Verified</strong>
+                        <small>Ready Possession</small>
+                    </div>
+                </div>
+                <a href="./contact-us.html" class="promo-cta-btn" onclick="closePromo()">
+                    Enquire Now <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="promo-dont-show">
+                    <label><input type="checkbox" id="promoDontShow" onchange="promoDontShowToggle(this)"> Don't show
+                        again</label>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Sidebar Drawer -->
+    <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+    <aside id="rightSidebar" class="right-sidebar">
+        <button class="sidebar-close-btn" onclick="closeSidebar()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="sidebar-section">
+            <h3 class="sidebar-heading">Quick <span class="text-accent">Link</span></h3>
+            <ul class="sidebar-links">
+                <li><a href="./about-us.html"><i class="fa-solid fa-users"></i> About Us</a></li>
+                <li><a href="./contact-us.html"><i class="fa-solid fa-headset"></i> Contact Us</a></li>
+                <li><a href="#"><i class="fa-solid fa-blog"></i> Blog</a></li>
+                <li><a href="#"><i class="fa-solid fa-newspaper"></i> News</a></li>
+                <li><a href="#"><i class="fa-solid fa-star"></i> Testimonials</a></li>
+                <li><a href="#"><i class="fa-solid fa-people-group"></i> Team</a></li>
+                <li><a href="#"><i class="fa-solid fa-briefcase"></i> Career</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3 class="sidebar-heading">Contact <span class="text-accent">Us</span></h3>
+            <ul class="sidebar-contact-list">
+                <li><span class="sidebar-contact-icon"><i class="fa-solid fa-location-dot"></i></span>F-47, 1st Floor,
+                    Milap Nagar, Uttam Nagar, New Delhi – 110059</li>
+                <li><span class="sidebar-contact-icon"><i class="fa-solid fa-phone"></i></span><a
+                        href="tel:+911800000000">+91 1800 000 000</a></li>
+                <li><span class="sidebar-contact-icon"><i class="fa-solid fa-envelope"></i></span><a
+                        href="mailto:info@bababroker.com">info@bababroker.com</a></li>
+                <li><span class="sidebar-contact-icon"><i class="fa-solid fa-globe"></i></span><a
+                        href="./index.html">www.bababroker.com</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3 class="sidebar-heading">Social <span class="text-accent">Media</span></h3>
+            <div class="sidebar-socials">
+                <a href="#" class="sidebar-social-btn" style="background:#1877f2;"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="sidebar-social-btn" style="background:#1da1f2;"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="sidebar-social-btn" style="background:#0a66c2;"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="sidebar-social-btn"
+                    style="background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);"><i
+                        class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Get a Quote Modal Section Start -->
+    <div id="quoteModal" class="quote-modal-overlay" onclick="closeQuoteModalOutside(event)">
+        <div class="quote-modal-box">
+            <button class="quote-modal-close" onclick="closeQuoteModal()">X</button>
+            <h2 class="quote-modal-title">Get a Free <span></span>Consultation</span> Today!</h2>
+            <p class="quote-modal-sub">
+                With our expertise and experience, we can help you find the perfect property and make the best
+                investment decision.
+            </p>
+            <form class="quote-modal-form" onsubmit="return false;">
+                <input type="text" placeholder="Name" class="quote-input" />
+                <input type="email" placeholder="Email" class="quote-input" />
+                <input type="tel" placeholder="Phone Number" class="quote-input" />
+                <textarea rows="4" placeholder="Property Requirements / Message"
+                    class="quote-input quote-textarea"></textarea>
+                <button type="submit" class="quote-submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Get a Quote Modal Section End -->
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
