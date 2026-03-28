@@ -237,15 +237,30 @@ document.addEventListener('keydown', (e) => {
         if (modal) {
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
+            startPromoSlider();
         }
     }, 800);
 })();
+
+let promoSliderInterval = null;
+
+function startPromoSlider() {
+    let current = 0;
+    const slides = document.querySelectorAll('.promo-slide');
+    if (slides.length < 2) return;
+    promoSliderInterval = setInterval(() => {
+        slides[current].classList.add('promo-slide-hidden');
+        current = (current + 1) % slides.length;
+        slides[current].classList.remove('promo-slide-hidden');
+    }, 2000);
+}
 
 function closePromo() {
     const modal = document.getElementById('promoModal');
     if (!modal) return;
     modal.classList.remove('open');
     document.body.style.overflow = '';
+    if (promoSliderInterval) { clearInterval(promoSliderInterval); promoSliderInterval = null; }
 }
 
 function closePromoOutside(e) {

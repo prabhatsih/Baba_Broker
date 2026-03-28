@@ -2144,6 +2144,10 @@ footer>* {
     opacity: 1;
 }
 
+.promo-overlay.open .promo-slide-hidden {
+    opacity: 0 !important;
+}
+
 @media (max-width: 640px) {
     .promo-box {
         grid-template-columns: 1fr;
@@ -2377,6 +2381,22 @@ footer>* {
 .promo-dont-show input[type="checkbox"] {
     accent-color: var(--color-accent);
     cursor: pointer;
+}
+
+/* Promo slide switching */
+.promo-slide {
+    transition: opacity 0.5s ease;
+}
+
+.promo-slide-hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) translateY(0) !important;
+    width: 100%;
+    max-width: 860px;
 }
 
 
