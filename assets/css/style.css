@@ -2803,3 +2803,668 @@ footer>* {
         height: 220px;
     }
 }
+
+/* ========== We Handle Everything Section ========== */
+.whe-card {
+    background: var(--color-dark-3);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.whe-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 32px rgba(246, 129, 34, 0.12);
+    transform: translateY(-2px);
+}
+
+.whe-card-top {
+    padding: 24px 24px 20px;
+}
+
+.whe-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.whe-card:hover .whe-icon {
+    transform: scale(1.1);
+}
+
+.whe-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.whe-subtitle {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+}
+
+.whe-chevron {
+    margin-top: 16px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.25);
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.whe-card:hover .whe-chevron {
+    transform: rotate(180deg);
+    color: var(--color-accent);
+}
+
+/* Expand area — hidden by default, revealed on hover */
+.whe-expand {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.35s ease,
+        opacity 0.35s ease;
+    padding: 0 24px;
+    opacity: 0;
+    border-top: 1px solid transparent;
+}
+
+.whe-card:hover .whe-expand {
+    max-height: 260px;
+    padding: 18px 24px 24px;
+    opacity: 1;
+    border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+.whe-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.whe-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.whe-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.whe-list li i {
+    font-size: 0.7rem;
+    flex-shrink: 0;
+}
+
+/* Touch devices — keep expand always accessible */
+@media (hover: none) {
+    .whe-card .whe-expand {
+        max-height: none;
+        padding: 18px 24px 24px;
+        opacity: 1;
+        border-top-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .whe-card .whe-chevron {
+        display: none;
+    }
+}
+
+/* ========== 5 Levels of Security Section ========== */
+.sec5-section {
+    padding: 80px 0;
+    background: var(--color-dark-2);
+    overflow: hidden;
+}
+
+/* Two-col layout */
+.sec5-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+/* Left sticky heading */
+.sec5-left {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+}
+
+.sec5-heading {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.sec5-sub {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.75;
+}
+
+/* Scrolling track wrapper — clips overflow */
+.sec5-track-wrap {
+    overflow: hidden;
+    /* fade edges */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* The moving track */
+.sec5-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: sec5Scroll 28s linear infinite;
+}
+
+.sec5-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes sec5Scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Individual card */
+.sec5-card {
+    position: relative;
+    width: 280px;
+    flex-shrink: 0;
+    background: var(--color-dark-3);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-lg);
+    padding: 22px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sec5-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 28px rgba(246, 129, 34, 0.1);
+}
+
+/* Level badge — top left */
+.sec5-level-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--color-primary-light);
+    background: rgba(11, 78, 157, 0.15);
+    border: 1px solid rgba(11, 78, 157, 0.25);
+    border-radius: var(--radius-full);
+    padding: 3px 10px;
+    width: fit-content;
+}
+
+/* Secured badge — top right */
+.sec5-secured-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+    padding: 3px 10px;
+}
+
+/* Icon box */
+.sec5-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-top: 4px;
+}
+
+.sec5-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.sec5-card-desc {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.65;
+    margin: 0;
+    flex: 1;
+}
+
+/* Footer: progress */
+.sec5-footer {
+    margin-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sec5-progress-label {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sec5-progress-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.sec5-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    border-radius: var(--radius-full);
+}
+
+/* ── Tablet (≤ 1024px): stack layout ── */
+@media (max-width: 1024px) {
+    .sec5-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .sec5-left {
+        position: static;
+        text-align: center;
+    }
+
+    .sec5-track-wrap {
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    }
+}
+
+/* ── Mobile (≤ 640px): smaller cards ── */
+@media (max-width: 640px) {
+    .sec5-section {
+        padding: 56px 0;
+    }
+
+    .sec5-card {
+        width: 240px;
+        padding: 18px 16px 14px;
+    }
+
+    .sec5-track {
+        gap: 14px;
+    }
+
+    .sec5-heading {
+        font-size: 1.8rem;
+    }
+}
+
+/* Pause on reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .sec5-track {
+        animation: none;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ========== Property Tokenization Section ========== */
+.ptok-section {
+    padding: 80px 0;
+    background: var(--color-dark);
+}
+
+/* ── Timeline container ── */
+.ptok-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+/* Vertical line running through center */
+.ptok-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            var(--color-primary) 10%,
+            var(--color-accent) 90%,
+            transparent 100%);
+}
+
+/* ── Each step row ── */
+.ptok-step {
+    display: grid;
+    grid-template-columns: 1fr 64px 1fr;
+    align-items: center;
+    gap: 0;
+    padding: 40px 0;
+    position: relative;
+}
+
+/* ── Center node ── */
+.ptok-node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.ptok-node-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-dark);
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 6px rgba(246, 129, 34, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.ptok-step:hover .ptok-node-num {
+    background: var(--color-accent);
+    color: #fff;
+    box-shadow: 0 0 0 8px rgba(246, 129, 34, 0.15);
+}
+
+/* ── Text side ── */
+.ptok-text {
+    padding: 0 32px;
+}
+
+.ptok-step--right .ptok-text {
+    text-align: right;
+    padding-right: 40px;
+    padding-left: 16px;
+}
+
+.ptok-step--left .ptok-text {
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 16px;
+}
+
+.ptok-step-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 6px;
+}
+
+.ptok-step-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.ptok-step-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.75;
+}
+
+/* ── Detail card ── */
+.ptok-card {
+    background: var(--color-dark-3);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-lg);
+    padding: 20px 22px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.ptok-step:hover .ptok-card {
+    border-color: rgba(246, 129, 34, 0.3);
+    box-shadow: 0 6px 24px rgba(246, 129, 34, 0.08);
+}
+
+/* Checklist */
+.ptok-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ptok-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ptok-checklist li i {
+    font-size: 0.72rem;
+    flex-shrink: 0;
+}
+
+/* Code block */
+.ptok-code-block {
+    background: #0a0f1a;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ptok-code-line {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ptok-indent {
+    padding-left: 16px;
+}
+
+.ptok-kw {
+    color: #14b8a6;
+}
+
+.ptok-var {
+    color: #a78bfa;
+}
+
+.ptok-comment {
+    color: rgba(255, 255, 255, 0.3);
+    font-style: italic;
+}
+
+/* Stats grid */
+.ptok-stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ptok-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.82rem;
+}
+
+.ptok-stat-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.ptok-stat-label {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.ptok-stat-val {
+    font-weight: 700;
+}
+
+/* Feature list */
+.ptok-feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ptok-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ptok-feat-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: rgba(246, 129, 34, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* ── Bottom CTA bar ── */
+.ptok-cta-bar {
+    margin-top: 56px;
+    background: var(--color-dark-3);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-lg);
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ── Tablet (≤ 900px): collapse to single column ── */
+@media (max-width: 900px) {
+    .ptok-timeline::before {
+        left: 24px;
+    }
+
+    .ptok-step {
+        grid-template-columns: 48px 1fr;
+        grid-template-rows: auto auto;
+        gap: 0 16px;
+        padding: 28px 0;
+    }
+
+    /* node always in col 1 row 1 */
+    .ptok-node {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+        margin-top: 4px;
+    }
+
+    /* text always in col 2 row 1 */
+    .ptok-step--right .ptok-text,
+    .ptok-step--left .ptok-text {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left;
+        padding: 0 0 12px 0;
+    }
+
+    /* card always in col 2 row 2 */
+    .ptok-step--right .ptok-card,
+    .ptok-step--left .ptok-card {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+/* ── Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+    .ptok-section {
+        padding: 56px 0;
+    }
+
+    .ptok-node-num {
+        width: 38px;
+        height: 38px;
+        font-size: 0.85rem;
+    }
+
+    .ptok-step-title {
+        font-size: 1rem;
+    }
+
+    .ptok-cta-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .ptok-cta-bar .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
