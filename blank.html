@@ -47,7 +47,7 @@
 
             <!-- Navbar Mid Menu -->
             <ul class="hidden md:flex items-center gap-6 text-sm font-medium" id="main-nav">
-                <li><a href="./index.html" class="hover:text-accent transition-colors py-2 block">Home</a></li>
+                <li><a href="#home" class="hover:text-accent transition-colors py-2 block">Home</a></li>
                 <li class="mega-parent" data-mega="mega-buy">
                     <a href="#" class="mega-trigger">Buy
                         <i class="fa-solid fa-chevron-down text-xs ml-1 mega-chevron"></i>
@@ -80,7 +80,7 @@
                     <div class="mega-promo">
                         <p class="mega-promo-title">Find your<br>dream home</p>
                         <p class="mega-promo-sub">Browse verified listings across top cities with zero brokerage.</p>
-                        <a href="./index.html#properties" class="mega-promo-btn">Explore Properties</a>
+                        <a href="#properties" class="mega-promo-btn">Explore Properties</a>
                     </div>
                     <div class="mega-content">
                         <p class="mega-section-label">Property Types</p>
@@ -167,7 +167,7 @@
                     <div class="mega-promo">
                         <p class="mega-promo-title">End-to-end<br>real estate help</p>
                         <p class="mega-promo-sub">From search to registration — we handle everything for you.</p>
-                        <a href="./index.html#services" class="mega-promo-btn">View All Services</a>
+                        <a href="#services" class="mega-promo-btn">View All Services</a>
                     </div>
                     <div class="mega-content">
                         <p class="mega-section-label">Our Services</p>
@@ -221,8 +221,7 @@
 
             <!-- Navbar Right Menu -->
             <div class="flex items-center gap-3">
-                <a href="./index.html#services"
-                    class="nav-btn-ai hidden md:inline-flex items-center gap-2 text-sm font-semibold">
+                <a href="#services" class="nav-btn-ai hidden md:inline-flex items-center gap-2 text-sm font-semibold">
                     <i class="fa-solid fa-star"></i> Ai Services
                 </a>
                 <a href="javascript:void(0)" onclick="openQuoteModal()"
@@ -241,25 +240,30 @@
                             <span class="phone-dropdown-line"></span>
                             <span class="phone-dropdown-title">Get In Touch</span>
                         </div>
+                        <!-- Sales Team -->
                         <p class="phone-dropdown-group">Baba Broker Sales Team</p>
                         <a href="tel:+911800000000" class="phone-dropdown-item">
                             <span class="phone-dropdown-icon"><i class="fa-solid fa-phone"></i></span>
                             <span><small>Phone</small><strong>+91 1800 000 000</strong></span>
                         </a>
                         <a href="https://wa.me/919586505111" class="phone-dropdown-item">
-                            <span class="phone-dropdown-icon" style="color:#25d366;"><i
-                                    class="fa-brands fa-whatsapp"></i></span>
+                            <span class="phone-dropdown-icon" style="color:#25d366;">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </span>
                             <span><small>WhatsApp</small><strong>+91 95865 05111</strong></span>
                         </a>
                         <a href="mailto:sales@bababroker.com" class="phone-dropdown-item">
-                            <span class="phone-dropdown-icon" style="color:#F68122;"><i
-                                    class="fa-solid fa-envelope"></i></span>
+                            <span class="phone-dropdown-icon" style="color:#F68122;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
                             <span><small>Email</small><strong>sales@bababroker.com</strong></span>
                         </a>
+                        <!-- Support Team -->
                         <p class="phone-dropdown-group">Baba Broker Support</p>
                         <a href="mailto:info@bababroker.com" class="phone-dropdown-item">
-                            <span class="phone-dropdown-icon" style="color:#F68122;"><i
-                                    class="fa-solid fa-envelope"></i></span>
+                            <span class="phone-dropdown-icon" style="color:#F68122;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
                             <span><small>Email</small><strong>info@bababroker.com</strong></span>
                         </a>
                     </div>
@@ -361,15 +365,16 @@
     <!-- Navbar Section End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="hero-section flex items-center justify-center pt-20">
-        <div class="w-full flex flex-col items-center justify-center px-4 py-20 sm:py-28 text-center fade-in">
+    <section id="home" class="hero-section flex items-center">
+        <div class="w-full flex flex-col items-center justify-center px-4 py-20 sm:py-28 text-center fade-in lg:-mt-20">
 
             <!-- Subtitle -->
-            <p class="text-accent text-sm sm:text-base font-semibold mb-3 tracking-wide">Homes that fit your lifestyle
+            <p class="text-accent text-sm sm:text-base font-semibold mb-3 tracking-wide">
+                Homes that fit your lifestyle
             </p>
 
             <!-- Heading -->
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-10 max-w-3xl">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-10 max-w-4xl">
                 Discover a Home you'll love
             </h1>
 
@@ -548,39 +553,54 @@
                 </div>
             </div>
 
-            <!-- Stats strip -->
-            <div class="hero-stats-strip mt-10 sm:mt-14 w-full max-w-2xl">
-                <div class="hero-stat">
-                    <i class="fa-solid fa-house text-accent text-2xl sm:text-3xl mb-1 sm:mb-0 sm:mr-3"></i>
-                    <div>
-                        <div class="text-white font-bold text-lg sm:text-2xl" data-target="100000" data-suffix="+">0
-                        </div>
-                        <div class="text-white/70 text-xs sm:text-sm">Homes Rented / Sold</div>
-                    </div>
-                </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat">
-                    <i class="fa-solid fa-users text-accent text-2xl sm:text-3xl mb-1 sm:mb-0 sm:mr-3"></i>
-                    <div>
-                        <div class="text-white font-bold text-lg sm:text-2xl" data-target="200000" data-suffix="+">0
-                        </div>
-                        <div class="text-white/70 text-xs sm:text-sm">Happy Customers</div>
-                    </div>
-                </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat">
-                    <i class="fa-solid fa-key text-accent text-2xl sm:text-3xl mb-1 sm:mb-0 sm:mr-3"></i>
-                    <div>
-                        <div class="text-white font-bold text-lg sm:text-2xl" data-target="100000" data-suffix="+">0
-                        </div>
-                        <div class="text-white/70 text-xs sm:text-sm">Home Owners Trust Us</div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
     <!-- Hero Section End -->
+
+    <!-- Our Features Section Start -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-16 lg:-mt-36 bg-dark-2 lg:bg-none py-8 lg:relative lg:rounded-2xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-8 gap-4">
+            <div class="card fade-in text-center cursor-pointer hover:border-accent">
+                <i class="fa-solid fa-house text-3xl text-accent mb-3"></i>
+                <p class="font-semibold text-sm">Discover Suitable Properties</p>
+                <p class="text-gray-400 text-xs mt-1 mb-4">
+                    Our interactive search helps you find a perfect home from the widest range of properties that
+                    cater
+                    to all your needs.
+                </p>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">SEARCH MORE -></a>
+            </div>
+            <div class="card fade-in text-center cursor-pointer hover:border-accent">
+                <i class="fa-solid fa-building text-3xl text-accent mb-3"></i>
+                <p class="font-semibold text-sm">Find Trusted Agents</p>
+                <p class="text-gray-400 text-xs mt-1 mb-4">
+                    Get expert opinions and real estate assistance from an extensive catalogue of registered agents
+                    in
+                    your preferred locality.
+                </p>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">FIND AN AGENT -></a>
+            </div>
+            <div class="card fade-in text-center cursor-pointer hover:border-accent">
+                <i class="fa-solid fa-city text-3xl text-accent mb-3"></i>
+                <p class="font-semibold text-sm">Connect with Genuine Buyers</p>
+                <p class="text-gray-400 text-xs mt-1 mb-4">
+                    List your property on our portal for FREE and showcase it to 50,000+ active home seekers.
+                </p>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">POST YOUR PROPERTY
+                    -></a>
+            </div>
+            <div class="card fade-in text-center cursor-pointer hover:border-accent">
+                <i class="fa-solid fa-land-mine-on text-3xl text-accent mb-3"></i>
+                <p class="font-semibold text-sm">Get Property Alerts</p>
+                <p class="text-gray-400 text-xs mt-1 mb-4">
+                    Can't find what you're looking for? Tell us your requirement and get instant alerts as soon as a
+                    matching property gets listed on our portal.
+                </p>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">SET AN ALERT -></a>
+            </div>
+        </div>
+    </section>
+    <!-- Our Features Section End -->
 
     <!-- Contact us and Blog Section Start -->
     <section class="section contact-blog-section">

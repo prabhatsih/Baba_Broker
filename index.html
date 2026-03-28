@@ -366,15 +366,16 @@
     <!-- Navbar Section End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="hero-section flex items-center justify-center pt-20">
-        <div class="w-full flex flex-col items-center justify-center px-4 py-20 sm:py-28 text-center fade-in">
+    <section id="home" class="hero-section flex items-center">
+        <div class="w-full flex flex-col items-center justify-center px-4 py-20 sm:py-28 text-center fade-in lg:-mt-20">
 
             <!-- Subtitle -->
-            <p class="text-accent text-sm sm:text-base font-semibold mb-3 tracking-wide">Homes that fit your lifestyle
+            <p class="text-accent text-sm sm:text-base font-semibold mb-3 tracking-wide">
+                Homes that fit your lifestyle
             </p>
 
             <!-- Heading -->
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-10 max-w-3xl">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-10 max-w-4xl">
                 Discover a Home you'll love
             </h1>
 
@@ -554,7 +555,7 @@
             </div>
 
             <!-- Stats strip -->
-            <div class="hero-stats-strip mt-10 sm:mt-14 w-full max-w-2xl">
+            <!-- <div class="hero-stats-strip mt-10 sm:mt-14 w-full max-w-2xl">
                 <div class="hero-stat">
                     <i class="fa-solid fa-house text-accent text-2xl sm:text-3xl mb-1 sm:mb-0 sm:mr-3"></i>
                     <div>
@@ -581,20 +582,21 @@
                         <div class="text-white/70 text-xs sm:text-sm">Home Owners Trust Us</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </section>
     <!-- Hero Section End -->
 
     <!-- Our Features Section Start -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-16 lg:-mt-16">
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <section class="max-w-7xl mx-auto px-6 lg:px-16 lg:-mt-36 bg-dark-2 lg:bg-none py-8 lg:relative lg:rounded-2xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-8 gap-4">
             <div class="card fade-in text-center cursor-pointer hover:border-accent">
                 <i class="fa-solid fa-house text-3xl text-accent mb-3"></i>
                 <p class="font-semibold text-sm">Discover Suitable Properties</p>
                 <p class="text-gray-400 text-xs mt-1 mb-4">
-                    Our interactive search helps you find a perfect home from the widest range of properties that cater
+                    Our interactive search helps you find a perfect home from the widest range of properties that
+                    cater
                     to all your needs.
                 </p>
                 <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">SEARCH MORE -></a>
@@ -603,7 +605,8 @@
                 <i class="fa-solid fa-building text-3xl text-accent mb-3"></i>
                 <p class="font-semibold text-sm">Find Trusted Agents</p>
                 <p class="text-gray-400 text-xs mt-1 mb-4">
-                    Get expert opinions and real estate assistance from an extensive catalogue of registered agents in
+                    Get expert opinions and real estate assistance from an extensive catalogue of registered agents
+                    in
                     your preferred locality.
                 </p>
                 <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">FIND AN AGENT -></a>
@@ -614,7 +617,8 @@
                 <p class="text-gray-400 text-xs mt-1 mb-4">
                     List your property on our portal for FREE and showcase it to 50,000+ active home seekers.
                 </p>
-                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">POST YOUR PROPERTY -></a>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">POST YOUR PROPERTY
+                    -></a>
             </div>
             <div class="card fade-in text-center cursor-pointer hover:border-accent">
                 <i class="fa-solid fa-land-mine-on text-3xl text-accent mb-3"></i>
@@ -713,68 +717,68 @@
 
     <!-- Browse By Budget Section Start -->
     <section class="py-16 bg-dark-2">
-        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 <!-- Left: Image collage -->
-                <div class="flex gap-3 items-start">
-                    <!-- Left col: top image tall, bottom image shorter, bottom-aligned -->
-                    <div class="flex flex-col gap-3 flex-1">
-                        <div class="rounded-2xl overflow-hidden" style="height:220px;">
-                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80"
+                <div class="flex gap-4 items-start budget-collage">
+                    <!-- Left col: top image tall, bottom image shorter -->
+                    <div class="flex flex-col gap-4 flex-1">
+                        <div class="rounded-2xl overflow-hidden budget-img-top">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
                                 alt="Interior" class="w-full h-full object-cover" />
                         </div>
-                        <div class="rounded-2xl overflow-hidden" style="height:160px;">
-                            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80"
+                        <div class="rounded-2xl overflow-hidden budget-img-bottom">
+                            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80"
                                 alt="Building" class="w-full h-full object-cover" />
                         </div>
                     </div>
                     <!-- Right col: tall image, starts with a top offset -->
-                    <div class="rounded-2xl overflow-hidden flex-1" style="height:360px; margin-top:40px;">
-                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80" alt="Villa"
+                    <div class="rounded-2xl overflow-hidden flex-1 budget-img-right">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80" alt="Villa"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>
 
                 <!-- Right: Content -->
                 <div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Browse By <span
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5">Browse By <span
                             class="text-accent">Budget</span></h2>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Finding the right property within your budget
+                    <p class="text-gray-400 leading-relaxed mb-6">Finding the right property within your budget
                         is a key factor in making a smart real estate investment. Whether you're looking for an
                         affordable home, a mid-range property with modern amenities, or a luxury residence in a prime
                         location, budget-based categorisation helps streamline your search. By exploring projects that
                         align with your financial goals, you can make well-informed decisions and invest confidently in
                         a property that meets both your needs and expectations.</p>
 
-                    <p class="text-white font-semibold text-sm mb-3">Browse by Budget</p>
+                    <p class="text-white font-semibold mb-4">Browse by Budget</p>
 
-                    <div class="grid grid-cols-2 gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <a href="#properties"
-                            class="flex items-center gap-3 bg-dark-3 border border-white/10 rounded-xl px-4 py-3 hover:border-accent transition-all group">
-                            <i class="fa-solid fa-house text-xl text-accent shrink-0"></i>
+                            class="flex items-center gap-4 bg-dark-3 border border-white/10 rounded-xl px-5 py-4 hover:border-accent transition-all group">
+                            <i class="fa-solid fa-house text-2xl text-accent shrink-0"></i>
                             <span>
-                                <p class="text-sm font-semibold text-white group-hover:text-accent transition-colors">
+                                <p class="font-semibold text-white group-hover:text-accent transition-colors">
                                     Affordable Projects</p>
-                                <p class="text-xs text-gray-500">120+ Available Properties</p>
+                                <p class="text-xs text-gray-500 mt-0.5">120+ Available Properties</p>
                             </span>
                         </a>
                         <a href="#properties"
-                            class="flex items-center gap-3 bg-dark-3 border border-white/10 rounded-xl px-4 py-3 hover:border-accent transition-all group">
-                            <i class="fa-solid fa-building text-xl text-accent shrink-0"></i>
+                            class="flex items-center gap-4 bg-dark-3 border border-white/10 rounded-xl px-5 py-4 hover:border-accent transition-all group">
+                            <i class="fa-solid fa-building text-2xl text-accent shrink-0"></i>
                             <span>
-                                <p class="text-sm font-semibold text-white group-hover:text-accent transition-colors">
+                                <p class="font-semibold text-white group-hover:text-accent transition-colors">
                                     Mid-segment</p>
-                                <p class="text-xs text-gray-500">120+ Available Properties</p>
+                                <p class="text-xs text-gray-500 mt-0.5">120+ Available Properties</p>
                             </span>
                         </a>
                         <a href="#properties"
-                            class="flex items-center gap-3 bg-dark-3 border border-white/10 rounded-xl px-4 py-3 hover:border-accent transition-all group">
-                            <i class="fa-solid fa-gem text-xl text-accent shrink-0"></i>
+                            class="flex items-center gap-4 bg-dark-3 border border-white/10 rounded-xl px-5 py-4 hover:border-accent transition-all group">
+                            <i class="fa-solid fa-gem text-2xl text-accent shrink-0"></i>
                             <span>
-                                <p class="text-sm font-semibold text-white group-hover:text-accent transition-colors">
+                                <p class="font-semibold text-white group-hover:text-accent transition-colors">
                                     Luxury Projects</p>
-                                <p class="text-xs text-gray-500">120+ Available Properties</p>
+                                <p class="text-xs text-gray-500 mt-0.5">120+ Available Properties</p>
                             </span>
                         </a>
                     </div>
@@ -787,75 +791,75 @@
 
     <!-- Collection Section Start -->
     <section class="py-16 bg-dark">
-        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
 
             <!-- Heading -->
-            <div class="text-center mb-10">
-                <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Recommended</p>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-wide">Collections
+            <div class="text-center mb-12">
+                <p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">Recommended</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-wide">Collections
                     <span class="text-accent">For You</span>
                 </h2>
             </div>
 
             <!-- Row 1: 2 wide cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                 <a href="#properties"
                     class="group rounded-2xl overflow-hidden bg-dark-3 border border-white/5 hover:border-accent transition-all">
-                    <div class="overflow-hidden h-44">
-                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80"
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
                             alt="Ready to Move In"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <div class="px-4 py-3">
-                        <p class="text-xs font-bold uppercase tracking-widest text-accent">Ready to Move In</p>
+                    <div class="px-5 py-4">
+                        <p class="text-sm font-bold uppercase tracking-widest text-accent">Ready to Move In</p>
                     </div>
                 </a>
                 <a href="#properties"
                     class="group rounded-2xl overflow-hidden bg-dark-3 border border-white/5 hover:border-accent transition-all">
-                    <div class="overflow-hidden h-44">
-                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80"
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
                             alt="Affordable Homes"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <div class="px-4 py-3">
-                        <p class="text-xs font-bold uppercase tracking-widest text-accent">Affordable Homes</p>
+                    <div class="px-5 py-4">
+                        <p class="text-sm font-bold uppercase tracking-widest text-accent">Affordable Homes</p>
                     </div>
                 </a>
             </div>
 
             <!-- Row 2: 3 equal cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <a href="#properties"
                     class="group rounded-2xl overflow-hidden bg-dark-3 border border-white/5 hover:border-accent transition-all">
-                    <div class="overflow-hidden h-40">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80"
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80"
                             alt="Under Construction"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <div class="px-4 py-3">
-                        <p class="text-xs font-bold uppercase tracking-widest text-accent">Under Construction Flats</p>
+                    <div class="px-5 py-4">
+                        <p class="text-sm font-bold uppercase tracking-widest text-accent">Under Construction Flats</p>
                     </div>
                 </a>
                 <a href="#properties"
                     class="group rounded-2xl overflow-hidden bg-dark-3 border border-white/5 hover:border-accent transition-all">
-                    <div class="overflow-hidden h-40">
-                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80"
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80"
                             alt="Luxury Homes"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <div class="px-4 py-3">
-                        <p class="text-xs font-bold uppercase tracking-widest text-accent">Luxury Homes</p>
+                    <div class="px-5 py-4">
+                        <p class="text-sm font-bold uppercase tracking-widest text-accent">Luxury Homes</p>
                     </div>
                 </a>
                 <a href="#properties"
                     class="group rounded-2xl overflow-hidden bg-dark-3 border border-white/5 hover:border-accent transition-all">
-                    <div class="overflow-hidden h-40">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&q=80"
+                    <div class="overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
                             alt="Ultra Luxury Homes"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <div class="px-4 py-3">
-                        <p class="text-xs font-bold uppercase tracking-widest text-accent">Ultra Luxury Homes</p>
+                    <div class="px-5 py-4">
+                        <p class="text-sm font-bold uppercase tracking-widest text-accent">Ultra Luxury Homes</p>
                     </div>
                 </a>
             </div>
@@ -866,7 +870,7 @@
 
     <!-- Property Types Section Start -->
     <section class="py-16 bg-dark-2">
-        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0 text-center">
 
             <!-- Top label -->
             <div
@@ -875,73 +879,74 @@
             </div>
 
             <!-- Heading -->
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">Explore Any Real Estate <span
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3">Explore Any Real Estate <span
                     class="text-accent">Property Type</span></h2>
-            <p class="text-gray-400 text-sm mb-8">Browse residential, commercial, plots, and rental properties with
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">Browse residential, commercial, plots, and rental properties
+                with
                 <span class="text-accent font-semibold">Baba Broker</span>
             </p>
 
             <!-- Tab pills -->
             <div class="flex flex-wrap justify-center gap-3 mb-8" id="propTypeTabs">
                 <button onclick="switchPropType(this,'residential')"
-                    class="prop-type-tab active-tab flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold border transition-all">
+                    class="prop-type-tab active-tab flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold border transition-all">
                     <i class="fa-solid fa-house"></i> Residential
                 </button>
                 <button onclick="switchPropType(this,'plots')"
-                    class="prop-type-tab flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold border border-white/10 text-gray-400 bg-transparent hover:border-accent hover:text-white transition-all">
+                    class="prop-type-tab flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold border border-white/10 text-gray-400 bg-transparent hover:border-accent hover:text-white transition-all">
                     <i class="fa-solid fa-map"></i> Plots
                 </button>
                 <button onclick="switchPropType(this,'commercial')"
-                    class="prop-type-tab flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold border border-white/10 text-gray-400 bg-transparent hover:border-accent hover:text-white transition-all">
+                    class="prop-type-tab flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold border border-white/10 text-gray-400 bg-transparent hover:border-accent hover:text-white transition-all">
                     <i class="fa-solid fa-building"></i> Commercial
                 </button>
                 <button onclick="switchPropType(this,'rental')"
-                    class="prop-type-tab flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold border border-white/10 text-gray-400 bg-transparent hover:border-accent hover:text-white transition-all">
+                    class="prop-type-tab flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold border border-white/10 text-gray-400 bg-transparent hover:border-accent hover:text-white transition-all">
                     <i class="fa-solid fa-key"></i> Rental
                 </button>
                 <button onclick="switchPropType(this,'luxury')"
-                    class="prop-type-tab flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold border border-white/10 text-gray-400 bg-transparent hover:border-accent hover:text-white transition-all">
+                    class="prop-type-tab flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold border border-white/10 text-gray-400 bg-transparent hover:border-accent hover:text-white transition-all">
                     <i class="fa-solid fa-gem"></i> Luxury
                 </button>
             </div>
 
             <!-- Panel card -->
-            <div class="rounded-2xl bg-dark-3 border border-white/8 p-6 text-left">
-                <div id="propTypePanel" class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+            <div class="rounded-2xl bg-dark-3 border border-white/8 p-6 sm:p-8 lg:p-10 text-left">
+                <div id="propTypePanel" class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 items-center">
 
                     <!-- Left: info -->
                     <div id="propTypeInfo">
-                        <div class="flex items-center gap-3 mb-4">
+                        <div class="flex items-center gap-4 mb-5">
                             <span id="propTypeIcon"
-                                class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-lg">
+                                class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent text-2xl shrink-0">
                                 <i class="fa-solid fa-house"></i>
                             </span>
                             <div>
-                                <p class="text-xs text-gray-500 uppercase tracking-widest">Property Type</p>
-                                <p id="propTypeTitle" class="text-white font-bold text-lg">Residential</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest mb-0.5">Property Type</p>
+                                <p id="propTypeTitle" class="text-white font-bold text-xl">Residential</p>
                             </div>
                         </div>
-                        <p id="propTypeDesc" class="text-gray-400 text-sm leading-relaxed mb-5">
+                        <p id="propTypeDesc" class="text-gray-400 leading-relaxed mb-6">
                             Browse verified residential properties — apartments, villas, and independent houses across
                             top cities. Find your perfect home with zero brokerage.
                         </p>
                         <div id="propTypeTags" class="flex flex-wrap gap-2">
-                            <span class="text-xs border border-white/10 rounded-full px-3 py-1 text-gray-300">
+                            <span class="text-xs border border-white/10 rounded-full px-3 py-1.5 text-gray-300">
                                 Quick Setup
                             </span>
-                            <span class="text-xs border border-white/10 rounded-full px-3 py-1 text-gray-300">
+                            <span class="text-xs border border-white/10 rounded-full px-3 py-1.5 text-gray-300">
                                 Verified Listings
                             </span>
-                            <span class="text-xs border border-white/10 rounded-full px-3 py-1 text-gray-300">
+                            <span class="text-xs border border-white/10 rounded-full px-3 py-1.5 text-gray-300">
                                 Full Support
                             </span>
                         </div>
                     </div>
 
                     <!-- Right: image -->
-                    <div class="rounded-xl overflow-hidden h-52">
+                    <div class="rounded-xl overflow-hidden prop-type-img-wrap">
                         <img id="propTypeImg"
-                            src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80"
+                            src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
                             alt="Residential" class="w-full h-full object-cover" />
                     </div>
 
@@ -954,7 +959,7 @@
 
     <!-- ===================== FEATURED PROPERTIES ===================== -->
     <section id="properties" class="section bg-dark">
-        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
             <div class="fade-in flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
                 <div>
                     <span class="text-accent text-sm font-semibold uppercase tracking-widest">Handpicked For You</span>
@@ -1040,7 +1045,7 @@
 
     <!-- ===================== SERVICES ===================== -->
     <section id="services" class="section bg-dark-2">
-        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
             <div class="fade-in text-center mb-12">
                 <span class="text-accent text-sm font-semibold uppercase tracking-widest">What We Offer</span>
                 <h2 class="section-title mt-2">Our <span class="text-accent">Services</span></h2>
@@ -1090,9 +1095,9 @@
         </div>
     </section>
 
-    <!-- ===================== ABOUT ===================== -->
+    <!-- About Section Start -->
     <section id="about" class="section bg-dark">
-        <div class="max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0 grid lg:grid-cols-2 gap-12 items-center">
             <div class="fade-in">
                 <span class="text-accent text-sm font-semibold uppercase tracking-widest">Who We Are</span>
                 <h2 class="section-title mt-2">About <span class="text-accent">Baba Broker</span></h2>
@@ -1141,10 +1146,11 @@
             </div>
         </div>
     </section>
+    <!-- About Section End -->
 
     <!-- ===================== STATS BANNER ===================== -->
     <section class="py-16 bg-primary">
-        <div class="max-w-7xl mx-auto px-6 lg:px-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div class="fade-in">
                 <p class="text-4xl font-extrabold text-white" data-target="700" data-suffix="+">0</p>
                 <p class="text-white/70 mt-1 text-sm">Properties Sold</p>
@@ -1164,67 +1170,9 @@
         </div>
     </section>
 
-    <!-- ===================== WHY CHOOSE US ===================== -->
-    <section class="section bg-dark-2">
-        <div class="max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="fade-in">
-                <span class="text-accent text-sm font-semibold uppercase tracking-widest">Why Baba Broker</span>
-                <h2 class="section-title mt-2">The Smarter Way to <span class="text-accent">Buy & Sell</span></h2>
-                <div class="accent-line"></div>
-                <div class="space-y-5 mt-2">
-                    <div class="flex gap-4">
-                        <div class="card-icon flex-shrink-0"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div>
-                            <h4 class="font-semibold mb-1">100% Verified Listings</h4>
-                            <p class="text-gray-400 text-sm">Every property is physically verified and legally checked
-                                before listing.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="card-icon flex-shrink-0"><i class="fa-solid fa-bolt"></i></div>
-                        <div>
-                            <h4 class="font-semibold mb-1">Fast & Easy Process</h4>
-                            <p class="text-gray-400 text-sm">From search to possession — we streamline the entire
-                                process for you.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="card-icon flex-shrink-0"><i class="fa-solid fa-indian-rupee-sign"></i></div>
-                        <div>
-                            <h4 class="font-semibold mb-1">Best Price Guarantee</h4>
-                            <p class="text-gray-400 text-sm">Our market expertise ensures you always get the fairest
-                                deal possible.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fade-in">
-                <div class="card border-primary/30 space-y-4">
-                    <h3 class="font-semibold text-lg">Request a Free Consultation</h3>
-                    <input type="text" placeholder="Your Name"
-                        class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors" />
-                    <input type="tel" placeholder="Phone Number"
-                        class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors" />
-                    <select
-                        class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-primary transition-colors">
-                        <option value="">I'm looking to...</option>
-                        <option>Buy a Property</option>
-                        <option>Sell a Property</option>
-                        <option>Rent a Property</option>
-                        <option>Invest in Real Estate</option>
-                    </select>
-                    <button class="btn btn-accent w-full justify-center">
-                        Book Free Consultation <i class="fa-solid fa-calendar-check"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section Start -->
     <section class="faq-section">
-        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
             <div class="faq-grid">
 
                 <!-- Left: CTA -->
@@ -1324,7 +1272,7 @@
 
     <!-- Contact us and Blog Section Start -->
     <section class="section contact-blog-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
                 <!-- LEFT: Contact Form -->
