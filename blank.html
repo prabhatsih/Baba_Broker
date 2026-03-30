@@ -1164,6 +1164,110 @@
     </footer>
     <!-- Footer Section End -->
 
+    <!-- Welcome Promo Popup -->
+    <div id="promoModal" class="promo-overlay" onclick="closePromoOutside(event)">
+        <!-- Slide 1 -->
+        <div class="promo-box promo-slide" id="promoSlide1">
+            <button class="promo-close" onclick="closePromo()"><i class="fa-solid fa-xmark"></i></button>
+            <!-- Left: Image panel -->
+            <div class="promo-img-panel">
+                <div class="promo-img-inner">
+                    <div class="promo-img-placeholder">
+                        <i class="fa-solid fa-building text-white/20" style="font-size:5rem;"></i>
+                    </div>
+                    <div class="promo-img-badge">
+                        <p class="promo-badge-title">Your Final <span>Opportunity</span></p>
+                        <p class="promo-badge-sub">To own before it's too late</p>
+                    </div>
+                    <div class="promo-offer-bar">
+                        <p class="promo-offer-title"><i class="fa-solid fa-tag"></i> Spot Booking Offer</p>
+                        <p class="promo-offer-sub">Available on every booking — Offer valid till 31st March, 2026</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Details panel -->
+            <div class="promo-detail-panel">
+                <div class="promo-brand">
+                    <span class="promo-brand-icon"><i class="fa-solid fa-building-columns"></i></span>
+                    <span class="promo-brand-name">Baba <span class="text-accent">Broker</span></span>
+                </div>
+                <h2 class="promo-property-name">Premium <span class="text-accent">Properties</span><br>Across India</h2>
+                <p class="promo-property-loc"><i class="fa-solid fa-location-dot text-accent"></i> Delhi NCR &amp; Major
+                    Cities</p>
+                <p class="promo-property-desc">Homes designed to give more back to life's little luxuries. Verified
+                    listings, zero hidden charges.</p>
+                <div class="promo-stats">
+                    <div class="promo-stat">
+                        <strong>2 &amp; 3 BHK</strong>
+                        <small>Starting at ₹45L+</small>
+                    </div>
+                    <div class="promo-stat-divider"></div>
+                    <div class="promo-stat">
+                        <strong>RERA Verified</strong>
+                        <small>Ready Possession</small>
+                    </div>
+                </div>
+                <a href="./contact-us.html" class="promo-cta-btn" onclick="closePromo()">
+                    Enquire Now <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="promo-dont-show">
+                    <label><input type="checkbox" id="promoDontShow" onchange="promoDontShowToggle(this)"> Don't show
+                        again</label>
+                </p>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="promo-box promo-slide promo-slide-hidden" id="promoSlide2">
+            <button class="promo-close" onclick="closePromo()"><i class="fa-solid fa-xmark"></i></button>
+            <!-- Left: Image panel -->
+            <div class="promo-img-panel" style="background: linear-gradient(135deg, #1a4731 0%, #0d2b1e 100%);">
+                <div class="promo-img-inner">
+                    <div class="promo-img-placeholder">
+                        <i class="fa-solid fa-city text-white/20" style="font-size:5rem;"></i>
+                    </div>
+                    <div class="promo-img-badge">
+                        <p class="promo-badge-title">Exclusive <span>Investment</span></p>
+                        <p class="promo-badge-sub">High-yield commercial spaces</p>
+                    </div>
+                    <div class="promo-offer-bar" style="background: #0d2b1e;">
+                        <p class="promo-offer-title"><i class="fa-solid fa-percent"></i> Zero Brokerage Deal</p>
+                        <p class="promo-offer-sub">Direct from builder — Limited units available</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Details panel -->
+            <div class="promo-detail-panel">
+                <div class="promo-brand">
+                    <span class="promo-brand-icon"><i class="fa-solid fa-handshake"></i></span>
+                    <span class="promo-brand-name">Baba <span class="text-accent">Broker</span></span>
+                </div>
+                <h2 class="promo-property-name">Commercial <span class="text-accent">Spaces</span><br>For Smart
+                    Investors</h2>
+                <p class="promo-property-loc"><i class="fa-solid fa-location-dot text-accent"></i> Noida, Gurugram &amp;
+                    Pune</p>
+                <p class="promo-property-desc">Office spaces and retail shops with guaranteed rental returns. Fully
+                    furnished options available.</p>
+                <div class="promo-stats">
+                    <div class="promo-stat">
+                        <strong>Shops &amp; Offices</strong>
+                        <small>Starting at ₹25L+</small>
+                    </div>
+                    <div class="promo-stat-divider"></div>
+                    <div class="promo-stat">
+                        <strong>8–10% Returns</strong>
+                        <small>Assured Rental Yield</small>
+                    </div>
+                </div>
+                <a href="./contact-us.html" class="promo-cta-btn" onclick="closePromo()">
+                    Book a Site Visit <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="promo-dont-show">
+                    <label><input type="checkbox" onchange="promoDontShowToggle(this)"> Don't show again</label>
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- Right Sidebar Drawer -->
     <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
     <aside id="rightSidebar" class="right-sidebar">
