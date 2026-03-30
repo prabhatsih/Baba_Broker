@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Baba Broker</title>
+    <title>About Us - Baba Broker</title>
     <meta name="description"
         content="Baba Broker – Find your dream property. Buy, sell, and rent residential & commercial real estate." />
 
@@ -455,599 +455,354 @@
     <!-- Navbar Section End -->
 
     <!-- Hero Section Start -->
-    <section class="about-hero h-[70vh] relative flex items-center justify-center text-center"
-        style="background: url(./assets/img/about-banner.jpg) no-repeat center/cover;">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <h1 class="relative text-white text-4xl font-bold">
-            About Baba Broker
-        </h1>
+    <section id="home" class="hero-section flex items-center">
+        <div class="w-full flex flex-col items-center justify-center px-4 py-20 sm:py-28 text-center fade-in lg:-mt-20">
+
+            <!-- Subtitle -->
+            <p class="text-accent text-sm sm:text-base font-semibold mb-3 tracking-wide">
+                Homes that fit your lifestyle
+            </p>
+
+            <!-- Heading -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-10 max-w-4xl">
+                Discover a Home you'll love
+            </h1>
+
+            <!-- Search Box Container -->
+            <div class="w-full max-w-3xl">
+
+                <!-- Tabs row: Buy / Rent + category pills -->
+                <div class="flex flex-wrap items-center gap-2 mb-0">
+                    <!-- Buy/Rent toggle -->
+                    <div class="hero-tab-group flex">
+                        <button class="hero-tab active" id="tab-buy" onclick="heroTab(this,'buy')">
+                            Buy <span class="hero-tab-dot"></span>
+                        </button>
+                        <button class="hero-tab" id="tab-rent" onclick="heroTab(this,'rent')">Rent</button>
+                    </div>
+                    <!-- Category pills — hidden on mobile -->
+                    <div class="hidden sm:flex flex-wrap gap-2 ml-2">
+                        <button class="hero-pill">Affordable</button>
+                        <button class="hero-pill">Luxury</button>
+                        <button class="hero-pill">Investment</button>
+                    </div>
+                </div>
+
+                <!-- Mobile category pills -->
+                <div class="flex sm:hidden flex-wrap gap-2 mt-2 mb-1 justify-center">
+                    <span class="text-xs text-white/70 border border-white/20 rounded-full px-3 py-1">Affordable</span>
+                    <span class="text-xs text-white/70 border border-white/20 rounded-full px-3 py-1">Luxury</span>
+                    <span class="text-xs text-white/70 border border-white/20 rounded-full px-3 py-1">Investment</span>
+                </div>
+
+                <!-- Search bar -->
+                <div class="hero-search-bar" style="position:relative;">
+                    <!-- City picker trigger -->
+                    <div class="hero-city-select" id="cityPickerTrigger" onclick="toggleCityPicker(event)">
+                        <span id="cityPickerLabel"
+                            class="text-gray-800 font-semibold text-sm whitespace-nowrap">Mumbai</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"
+                            fill="#6b7280" id="cityChevron" style="transition:transform 0.2s;flex-shrink:0;">
+                            <path
+                                d="M480-362q-8 0-15-2.5t-13-8.5L268-557q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-373q-6 6-13 8.5t-15 2.5Z" />
+                        </svg>
+                    </div>
+                    <div class="w-px bg-gray-300 h-8 mx-1 shrink-0"></div>
+                    <!-- Search input -->
+                    <div class="flex flex-1 items-center gap-2 px-2 min-w-0">
+                        <input type="text" placeholder="Search Locality, Landmark or Project"
+                            class="w-full bg-transparent text-sm text-gray-700 placeholder-gray-400 focus:outline-none py-1" />
+                        <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            style="flex-shrink:0;color:var(--color-primary)">
+                            <path
+                                d="M10.9172 9.66621H10.2589L10.0255 9.44121C11.0255 8.27454 11.5422 6.68288 11.2589 4.99121C10.8672 2.67455 8.93385 0.824545 6.60052 0.541211C3.07552 0.107878 0.108855 3.07454 0.542188 6.59955C0.825521 8.93288 2.67552 10.8662 4.99219 11.2579C6.68385 11.5412 8.27552 11.0245 9.44219 10.0245L9.66719 10.2579V10.9162L13.2089 14.4579C13.5505 14.7995 14.1089 14.7995 14.4505 14.4579C14.7922 14.1162 14.7922 13.5579 14.4505 13.2162L10.9172 9.66621ZM5.91719 9.66621C3.84219 9.66621 2.16719 7.99121 2.16719 5.91621C2.16719 3.84121 3.84219 2.16621 5.91719 2.16621C7.99219 2.16621 9.66719 3.84121 9.66719 5.91621C9.66719 7.99121 7.99219 9.66621 5.91719 9.66621Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+
+                    <!-- City Picker Dropdown Panel -->
+                    <div id="cityPickerDropdown" class="city-picker-dropdown hidden">
+                        <div class="city-picker-header">
+                            <span>Select City</span>
+                            <button onclick="closeCityPicker()" class="city-picker-close"><i
+                                    class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="city-picker-grid">
+
+                            <button class="city-item" onclick="selectCity('Bangalore')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M32 4C20.95 4 12 12.95 12 24c0 14.25 20 36 20 36s20-21.75 20-36C52 12.95 43.05 4 32 4zm0 26a6 6 0 1 1 0-12 6 6 0 0 1 0 12z" />
+                                </svg>
+                                <span>Bangalore</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Delhi')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M10 52h44v4H10zm2-4h4V28h-4zm8 0h4V22h-4zm8 0h4V18h-4zm8 0h4V22h-4zm8 0h4V28h-4zM32 8l-20 12h40z" />
+                                </svg>
+                                <span>Delhi</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Faridabad')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M8 52h48v4H8zm4-4h8V30h-8zm12 0h8V24h-8zm12 0h8V30h-8zm12 0h8V36h-8zM32 10 8 28h48z" />
+                                </svg>
+                                <span>Faridabad</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Ghaziabad')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path d="M20 52h24v4H20zm2-4h4V34h-4zm6 0h4V28h-4zm6 0h4V34h-4zM32 12 18 30h28z" />
+                                </svg>
+                                <span>Ghaziabad</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Greater Noida')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M12 56h40v-4H12zm2-6h6V34h-6zm10 0h6V28h-6zm10 0h6V34h-6zm10 0h6V40h-6zM32 8 10 32h44z" />
+                                </svg>
+                                <span>Gr. Noida</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Gurgaon')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path d="M16 56h32v-4H16zm4-6h4V34h-4zm8 0h4V26h-4zm8 0h4V34h-4zM32 10 14 32h36z" />
+                                </svg>
+                                <span>Gurgaon</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Hyderabad')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M32 6C19.85 6 10 15.85 10 28c0 15.46 22 30 22 30s22-14.54 22-30C54 15.85 44.15 6 32 6zm0 28a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" />
+                                </svg>
+                                <span>Hyderabad</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Indore')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M14 56h36v-4H14zm4-6h4V32h-4zm8 0h4V24h-4zm8 0h4V32h-4zm8 0h4V38h-4zM32 8 12 30h40z" />
+                                </svg>
+                                <span>Indore</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Jaipur')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M32 4c-2.2 0-4 1.8-4 4v4h-8v4h-4v36h32V16h-4v-4h-8V8c0-2.2-1.8-4-4-4zm-6 28h4v8h-4zm8 0h4v8h-4z" />
+                                </svg>
+                                <span>Jaipur</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Mumbai')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M32 4C20.95 4 12 12.95 12 24c0 14.25 20 36 20 36s20-21.75 20-36C52 12.95 43.05 4 32 4zm0 26a6 6 0 1 1 0-12 6 6 0 0 1 0 12z" />
+                                </svg>
+                                <span>Mumbai</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Navi Mumbai')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M10 56h44v-4H10zm4-6h6V32h-6zm10 0h6V24h-6zm10 0h6V32h-6zm10 0h6V38h-6zM32 6 8 30h48z" />
+                                </svg>
+                                <span>Navi Mumbai</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Noida')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path d="M18 56h28v-4H18zm4-6h4V32h-4zm8 0h4V26h-4zm8 0h4V32h-4zM32 10 16 30h32z" />
+                                </svg>
+                                <span>Noida</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Pune')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M32 6C21.5 6 13 14.5 13 25c0 13.8 19 33 19 33s19-19.2 19-33C51 14.5 42.5 6 32 6zm0 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14z" />
+                                </svg>
+                                <span>Pune</span>
+                            </button>
+
+                            <button class="city-item" onclick="selectCity('Thane')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+                                    <path
+                                        d="M12 56h40v-4H12zm4-6h6V30h-6zm10 0h6V22h-6zm10 0h6V30h-6zm10 0h6V36h-6zM32 8 10 28h44z" />
+                                </svg>
+                                <span>Thane</span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
     <!-- Hero Section End -->
 
-    <!-- About Info Section Start -->
-    <section class="section bg-dark-2">
-        <div class="max-w-7xl mx-auto px-6 lg:px-0">
-
-            <!-- Two Column: Image + Content -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-
-                <!-- Left: Image with floating quote card -->
-                <div class="relative pb-16 fade-in">
-                    <img src="./assets/img/about-banner.jpg" alt="About Baba Broker"
-                        class="w-full h-72 lg:h-[380px] object-cover rounded-2xl" />
-                    <!-- Floating quote card -->
-                    <div class="absolute bottom-0 left-0 w-4/5 bg-primary text-white px-5 py-4 rounded-xl shadow-lg">
-                        <p class="text-xs leading-relaxed mb-3">
-                            We always believe in making a great work relationship with clients and we always love
-                            to support our clients with all ups and downs in their business.
-                        </p>
-                        <p class="text-xs">
-                            <span class="font-bold">Amit Shukla</span>
-                            <span class="text-white/60 ml-1 font-normal">Founder &amp; Director</span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Right: Content -->
-                <div class="fade-in">
-                    <span class="text-accent text-sm font-semibold uppercase tracking-widest">About Baba Broker</span>
-                    <h2 class="section-title mt-2">We Deliver Your <span class="text-accent">Thoughts</span></h2>
-                    <div class="accent-line"></div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                        Baba Broker provides high quality Web &amp; Mobile App Development Services. Our excellent
-                        in-house team of experienced and skilled Web &amp; Mobile App Developers delivers
-                        requirement-specific and business-oriented solutions.
-                    </p>
-
-                    <!-- Blockquote — matches index.html card style -->
-                    <div class="card border-primary/30 mb-5 py-4 px-5">
-                        <p class="text-gray-300 text-sm italic leading-relaxed">
-                            Being a Top Web &amp; Mobile App Development Company, our team of skilled professionals
-                            &amp; programmers execute excellent Web &amp; App Development Services.
-                        </p>
-                    </div>
-
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        We have experts in all latest and trending technologies who work hard to achieve client
-                        requirements and deliver top-notch solutions on record turnaround time with very affordable
-                        costs. We are having deep experience working with all Industries and clients Worldwide.
-                    </p>
-
-                    <!-- Checklist — exact index.html pattern -->
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-accent"></i>
-                            Top-Notch Web &amp; App Development Services
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-accent"></i>
-                            Highly Skilled Team With Excellent Communication
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-accent"></i>
-                            Delivery As Per Requirements &amp; Client Ideas
-                        </li>
-                    </ul>
-                </div>
+    <!-- Our Features Section Start -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-16 lg:-mt-36 bg-dark-2 lg:bg-none py-8 lg:relative lg:rounded-2xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-8 gap-4">
+            <div class="card fade-in text-center cursor-pointer hover:border-accent">
+                <i class="fa-solid fa-house text-3xl text-accent mb-3"></i>
+                <p class="font-semibold text-sm">Discover Suitable Properties</p>
+                <p class="text-gray-400 text-xs mt-1 mb-4">
+                    Our interactive search helps you find a perfect home from the widest range of properties that
+                    cater
+                    to all your needs.
+                </p>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">SEARCH MORE -></a>
             </div>
-
-            <!-- Four Cards Row — uses site .card + .card-icon pattern -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <div class="card fade-in text-center cursor-pointer hover:border-primary group">
-                    <div class="card-icon mx-auto group-hover:bg-primary/30 transition-colors duration-300">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <h4 class="font-semibold text-base mb-2">Our Approach</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We always listen our client very carefully and make a proper plan for project as per client
-                        ideas.
-                    </p>
-                </div>
-
-                <div class="card fade-in text-center cursor-pointer hover:border-primary group">
-                    <div class="card-icon mx-auto group-hover:bg-primary/30 transition-colors duration-300">
-                        <i class="fa-solid fa-gem"></i>
-                    </div>
-                    <h4 class="font-semibold text-base mb-2">Our Values</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We always value our relationship with clients, we value each project whether its small or large.
-                    </p>
-                </div>
-
-                <div class="card fade-in text-center cursor-pointer hover:border-primary group">
-                    <div class="card-icon mx-auto group-hover:bg-primary/30 transition-colors duration-300">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <h4 class="font-semibold text-base mb-2">Our Support</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We provide long term support for any project. We always available for priority support and
-                        assistance.
-                    </p>
-                </div>
-
-                <div class="card fade-in text-center cursor-pointer hover:border-primary group">
-                    <div class="card-icon mx-auto group-hover:bg-primary/30 transition-colors duration-300">
-                        <i class="fa-solid fa-gear"></i>
-                    </div>
-                    <h4 class="font-semibold text-base mb-2">Our Resources</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We have skilled resources, who is well experienced in their relative technologies and required
-                        skills.
-                    </p>
-                </div>
-
+            <div class="card fade-in text-center cursor-pointer hover:border-accent">
+                <i class="fa-solid fa-building text-3xl text-accent mb-3"></i>
+                <p class="font-semibold text-sm">Find Trusted Agents</p>
+                <p class="text-gray-400 text-xs mt-1 mb-4">
+                    Get expert opinions and real estate assistance from an extensive catalogue of registered agents
+                    in
+                    your preferred locality.
+                </p>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">FIND AN AGENT -></a>
+            </div>
+            <div class="card fade-in text-center cursor-pointer hover:border-accent">
+                <i class="fa-solid fa-city text-3xl text-accent mb-3"></i>
+                <p class="font-semibold text-sm">Connect with Genuine Buyers</p>
+                <p class="text-gray-400 text-xs mt-1 mb-4">
+                    List your property on our portal for FREE and showcase it to 50,000+ active home seekers.
+                </p>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">POST YOUR PROPERTY
+                    -></a>
+            </div>
+            <div class="card fade-in text-center cursor-pointer hover:border-accent">
+                <i class="fa-solid fa-land-mine-on text-3xl text-accent mb-3"></i>
+                <p class="font-semibold text-sm">Get Property Alerts</p>
+                <p class="text-gray-400 text-xs mt-1 mb-4">
+                    Can't find what you're looking for? Tell us your requirement and get instant alerts as soon as a
+                    matching property gets listed on our portal.
+                </p>
+                <a href="javascript:void()" class="text-gray-400 hover:text-accent text-sm">SET AN ALERT -></a>
             </div>
         </div>
     </section>
-    <!-- About Info Section End -->
+    <!-- Our Features Section End -->
 
-    <!-- Connect With Us Section Start -->
-    <section class="relative py-24 overflow-hidden"
-        style="background: url('./assets/img/about-banner.jpg') center/cover no-repeat;">
-        <div class="absolute inset-0 bg-black/65"></div>
-
-        <div class="relative max-w-7xl mx-auto px-6 lg:px-0">
-
-            <!-- Section Heading -->
-            <div class="text-center mb-14 fade-in">
-                <span class="text-accent text-sm font-semibold uppercase tracking-widest">Work With Us</span>
-                <h2 class="section-title mt-2 text-white">Connect With Us To Know More About Our
-                    <span class="text-accent">Services And Team</span>
-                </h2>
-                <div class="accent-line mx-auto"></div>
-                <p class="text-gray-300 text-sm max-w-xl mx-auto leading-relaxed">
-                    We are available to assist you for all your queries and inquiry. Our team is always ready on
-                    priority basis to assist regarding all your needs.
+    <!-- About Section Start -->
+    <section id="about" class="section bg-dark">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <span class="text-accent text-sm font-semibold uppercase tracking-widest">Who We Are</span>
+                <h2 class="section-title mt-2">About <span class="text-accent">Baba Broker</span></h2>
+                <div class="accent-line"></div>
+                <p class="text-gray-400 mb-4">
+                    Baba Broker is a trusted real estate brokerage firm with over a decade of experience helping clients
+                    buy, sell, and invest in properties across the country.
                 </p>
+                <p class="text-gray-400 mb-6">
+                    Our team of certified agents and legal experts ensures every transaction is transparent, smooth, and
+                    stress-free — from the first viewing to the final handover.
+                </p>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accent"></i> RERA
+                        Registered & Certified Agents</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accent"></i> 700+
+                        Successfully Closed Deals</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accent"></i> Transparent
+                        Pricing, No Hidden Costs</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accent"></i> End-to-End
+                        Legal Assistance</li>
+                </ul>
             </div>
 
-            <!-- Two-column floating card -->
-            <div
-                class="grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto shadow-2xl rounded-2xl overflow-hidden fade-in">
-
-                <!-- Left: Blue gradient panel -->
-                <div class="bg-gradient-to-br from-primary to-primary-dark p-8 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-white text-2xl font-bold leading-snug mb-4">
-                            Best Solution As Per<br>Your Business Needs
-                        </h3>
-                        <p class="text-white/75 text-sm leading-relaxed mb-6">
-                            We deliver the quality solution as per your business requirements, each to diverse into
-                            different requirements and different target audiences. We always deliver solutions which
-                            helps you to stand out your business in a competitive market.
-                        </p>
-                        <ul class="space-y-2 text-sm text-white/90 mb-8">
-                            <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-circle-check text-accent"></i>
-                                Unique and Creative Ideas For Your Business
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-circle-check text-accent"></i>
-                                High Performing Product Delivery
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-circle-check text-accent"></i>
-                                Affordable Costs and Timely Delivery
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-circle-check text-accent"></i>
-                                Long Term Support &amp; Maintenance Services
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex gap-3 flex-wrap">
-                        <a href="javascript:void(0)" onclick="openQuoteModal()"
-                            class="btn btn-accent text-sm px-6 rounded-full">
-                            Get A Quote
-                        </a>
-                        <a href="#contact" class="btn btn-outline text-sm px-6 rounded-full">
-                            Get Started <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
+            <div class="fade-in grid grid-cols-2 gap-4">
+                <div class="card text-center">
+                    <i class="fa-solid fa-house-circle-check text-3xl text-accent mb-3"></i>
+                    <p class="text-sm text-gray-400">Properties Sold</p>
+                    <p class="stat-number" data-target="700" data-suffix="+">0</p>
                 </div>
+                <div class="card text-center">
+                    <i class="fa-solid fa-users text-3xl text-accent mb-3"></i>
+                    <p class="text-sm text-gray-400">Happy Clients</p>
+                    <p class="stat-number" data-target="1200" data-suffix="+">0</p>
+                </div>
+                <div class="card text-center">
+                    <i class="fa-solid fa-calendar text-3xl text-accent mb-3"></i>
+                    <p class="text-sm text-gray-400">Years Experience</p>
+                    <p class="stat-number" data-target="10" data-suffix="+">0</p>
+                </div>
+                <div class="card text-center">
+                    <i class="fa-solid fa-map-location-dot text-3xl text-accent mb-3"></i>
+                    <p class="text-sm text-gray-400">Cities Covered</p>
+                    <p class="stat-number" data-target="15" data-suffix="+">0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
 
-                <!-- Right: White contact form -->
-                <div class="bg-white p-8">
-                    <form class="space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-gray-600 text-xs font-semibold mb-1">Name</label>
-                                <input type="text" placeholder="Your Name"
-                                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-primary transition-colors" />
-                            </div>
-                            <div>
-                                <label class="block text-gray-600 text-xs font-semibold mb-1">Email</label>
-                                <input type="email" placeholder="Your Email"
-                                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-primary transition-colors" />
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-gray-600 text-xs font-semibold mb-1">Subject</label>
-                                <input type="text" placeholder="Subject"
-                                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-primary transition-colors" />
-                            </div>
-                            <div>
-                                <label class="block text-gray-600 text-xs font-semibold mb-1">Telephone</label>
-                                <input type="tel" placeholder="Your Phone"
-                                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-primary transition-colors" />
-                            </div>
-                        </div>
+    <!-- WHY CHOOSE US Section Start -->
+    <section class="section bg-dark-2">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <span class="text-accent text-sm font-semibold uppercase tracking-widest">Why Baba Broker</span>
+                <h2 class="section-title mt-2">The Smarter Way to <span class="text-accent">Buy & Sell</span></h2>
+                <div class="accent-line"></div>
+                <div class="space-y-5 mt-2">
+                    <div class="flex gap-4">
+                        <div class="card-icon flex-shrink-0"><i class="fa-solid fa-shield-halved"></i></div>
                         <div>
-                            <label class="block text-gray-600 text-xs font-semibold mb-1">Additional Details</label>
-                            <textarea rows="4" placeholder="Additional details..."
-                                class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+                            <h4 class="font-semibold mb-1">100% Verified Listings</h4>
+                            <p class="text-gray-400 text-sm">Every property is physically verified and legally checked
+                                before listing.</p>
                         </div>
-                        <button type="submit"
-                            class="btn btn-primary w-full justify-center rounded-full text-sm font-semibold">
-                            Submit Request
-                        </button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Connect With Us Section End -->
-
-    <!-- Team Section Start -->
-    <section class="section bg-dark-2">
-        <div class="max-w-7xl mx-auto px-6 lg:px-0">
-
-            <!-- Heading -->
-            <div class="mb-12 fade-in">
-                <span class="text-accent text-sm font-semibold uppercase tracking-widest">Who You'll Work With</span>
-                <h2 class="section-title mt-2">The People Who Make <span class="text-accent">the Decisions.</span></h2>
-                <div class="accent-line"></div>
-                <p class="text-gray-400 text-sm max-w-xl">
-                    Senior leaders who stay involved — not just at the pitch, but throughout the engagement.
-                </p>
-            </div>
-
-            <!-- Row 1: 5 members -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-6">
-
-                <div class="fade-in group">
-                    <div
-                        class="overflow-hidden rounded-2xl bg-dark-3 border border-white/5 mb-3 aspect-[3/4] group-hover:border-accent transition-all duration-300">
-                        <img src="https://placehold.co/300x400/1f2937/6b7280?text=V.A" alt="Vinay Angadi"
-                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <p class="font-semibold text-sm text-white">Vinay Angadi</p>
-                    <p class="text-gray-400 text-xs mt-0.5">Founder</p>
-                </div>
-
-                <div class="fade-in group">
-                    <div
-                        class="overflow-hidden rounded-2xl bg-dark-3 border border-white/5 mb-3 aspect-[3/4] group-hover:border-accent transition-all duration-300">
-                        <img src="https://placehold.co/300x400/1f2937/6b7280?text=T.A" alt="Thunga M Angadi"
-                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                    <div class="flex gap-4">
+                        <div class="card-icon flex-shrink-0"><i class="fa-solid fa-bolt"></i></div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Fast & Easy Process</h4>
+                            <p class="text-gray-400 text-sm">From search to possession — we streamline the entire
+                                process for you.</p>
+                        </div>
                     </div>
-                    <p class="font-semibold text-sm text-white">Thunga M Angadi</p>
-                    <p class="text-gray-400 text-xs mt-0.5">Co-Founder</p>
-                </div>
-
-                <div class="fade-in group">
-                    <div
-                        class="overflow-hidden rounded-2xl bg-dark-3 border border-white/5 mb-3 aspect-[3/4] group-hover:border-accent transition-all duration-300">
-                        <img src="https://placehold.co/300x400/1f2937/6b7280?text=B.VS" alt="Babji VS"
-                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                    <div class="flex gap-4">
+                        <div class="card-icon flex-shrink-0"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Best Price Guarantee</h4>
+                            <p class="text-gray-400 text-sm">Our market expertise ensures you always get the fairest
+                                deal possible.</p>
+                        </div>
                     </div>
-                    <p class="font-semibold text-sm text-white">Babji VS</p>
-                    <p class="text-gray-400 text-xs mt-0.5">Advisory Board</p>
                 </div>
-
-                <div class="fade-in group">
-                    <div
-                        class="overflow-hidden rounded-2xl bg-dark-3 border border-white/5 mb-3 aspect-[3/4] group-hover:border-accent transition-all duration-300">
-                        <img src="https://placehold.co/300x400/1f2937/6b7280?text=B.B" alt="Bhaskar Bulusu"
-                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <p class="font-semibold text-sm text-white">Bhaskar Bulusu</p>
-                    <p class="text-gray-400 text-xs mt-0.5">Advisory Board</p>
-                </div>
-
-                <div class="fade-in group">
-                    <div
-                        class="overflow-hidden rounded-2xl bg-dark-3 border border-white/5 mb-3 aspect-[3/4] group-hover:border-accent transition-all duration-300">
-                        <img src="https://placehold.co/300x400/1f2937/6b7280?text=A.D" alt="Amit Didwania"
-                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <p class="font-semibold text-sm text-white">Amit Didwania</p>
-                    <p class="text-gray-400 text-xs mt-0.5">VP-Business Strategy</p>
-                </div>
-
             </div>
 
-            <!-- Row 2: 1 member left-aligned -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-
-                <div class="fade-in group">
-                    <div
-                        class="overflow-hidden rounded-2xl bg-dark-3 border border-white/5 mb-3 aspect-[3/4] group-hover:border-accent transition-all duration-300">
-                        <img src="https://placehold.co/300x400/1f2937/6b7280?text=N.B" alt="Nagesh Babu"
-                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <p class="font-semibold text-sm text-white">Nagesh Babu</p>
-                    <p class="text-gray-400 text-xs mt-0.5">Director of Product Implementation</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- Team Section End -->
-
-    <!-- Team Gallery Section Start -->
-    <section class="section bg-dark overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-0">
-
-            <!-- Heading -->
-            <div class="mb-12 fade-in">
-                <span class="text-accent text-sm font-semibold uppercase tracking-widest">The Team</span>
-                <h2 class="section-title mt-2">The People Behind <span class="text-accent">the Work.</span></h2>
-                <div class="accent-line"></div>
-                <p class="text-gray-400 text-sm max-w-xl">
-                    100+ engineers, designers, strategists, and problem-solvers — distributed across Bengaluru, Dubai,
-                    and beyond.
-                </p>
-            </div>
-        </div>
-
-        <!-- Row 1: scroll right → left -->
-        <div class="relative overflow-hidden mb-4">
-            <div class="flex gap-4 team-scroll-ltr" style="width:max-content;">
-                <!-- set 1 -->
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <!-- duplicate for seamless loop -->
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-            </div>
-        </div>
-
-        <!-- Row 2: scroll left → right -->
-        <div class="relative overflow-hidden">
-            <div class="flex gap-4 team-scroll-rtl" style="width:max-content;">
-                <!-- set 1 -->
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"><img
-                        src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <!-- duplicate for seamless loop -->
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/111827/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-                <div class="w-44 h-52 rounded-2xl bg-dark-3 border border-white/5 overflow-hidden shrink-0"
-                    aria-hidden="true"><img src="https://placehold.co/176x208/1f2937/6b7280?text=Member" alt=""
-                        class="w-full h-full object-cover object-top" /></div>
-            </div>
-        </div>
-
-    </section>
-    <!-- Team Gallery Section End -->
-
-    <!-- Stats Banner Section Start -->
-    <section class="py-16 bg-primary">
-        <div class="max-w-7xl mx-auto px-6 lg:px-0 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div class="fade-in">
-                <p class="text-3xl sm:text-4xl font-extrabold text-white" data-target="10" data-suffix="+">0</p>
-                <p class="text-white/70 mt-1 text-sm">Business Partner</p>
-            </div>
-            <div class="fade-in">
-                <p class="text-3xl sm:text-4xl font-extrabold text-white" data-target="12" data-suffix="+">0</p>
-                <p class="text-white/70 mt-1 text-sm">Award Wins</p>
-            </div>
-            <div class="fade-in">
-                <p class="text-3xl sm:text-4xl font-extrabold text-white" data-target="600" data-suffix="+">0</p>
-                <p class="text-white/70 mt-1 text-sm">Happy Clients</p>
-            </div>
-            <div class="fade-in">
-                <p class="text-3xl sm:text-4xl font-extrabold text-white" data-target="3000" data-suffix="+">0</p>
-                <p class="text-white/70 mt-1 text-sm">Project Completed</p>
+                <div class="card border-primary/30 space-y-4">
+                    <h3 class="font-semibold text-lg">Request a Free Consultation</h3>
+                    <input type="text" placeholder="Your Name"
+                        class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors" />
+                    <input type="tel" placeholder="Phone Number"
+                        class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors" />
+                    <select
+                        class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-primary transition-colors">
+                        <option value="">I'm looking to...</option>
+                        <option>Buy a Property</option>
+                        <option>Sell a Property</option>
+                        <option>Rent a Property</option>
+                        <option>Invest in Real Estate</option>
+                    </select>
+                    <button class="btn btn-accent w-full justify-center">
+                        Book Free Consultation <i class="fa-solid fa-calendar-check"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Stats Banner Section End -->
-
-    <!-- Our Offices Section Start -->
-    <section class="section bg-dark-2">
-        <div class="max-w-7xl mx-auto px-6 lg:px-0">
-
-            <!-- Heading -->
-            <div class="text-center mb-12 fade-in">
-                <span class="text-accent text-sm font-semibold uppercase tracking-widest">Where We Are</span>
-                <h2 class="section-title mt-2">Our <span class="text-accent">Offices</span></h2>
-                <div class="accent-line mx-auto"></div>
-            </div>
-
-            <!-- Office Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- USA -->
-                <div class="card fade-in group hover:border-accent cursor-pointer">
-                    <!-- City illustration placeholder -->
-                    <div
-                        class="w-full h-36 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5 overflow-hidden group-hover:bg-primary/20 transition-colors duration-300">
-                        <i
-                            class="fa-solid fa-city text-5xl text-primary/40 group-hover:text-primary/60 transition-colors duration-300"></i>
-                    </div>
-                    <p class="text-accent text-xs font-bold uppercase tracking-widest mb-1">USA</p>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        2710 Pace West Dr, Tucson<br>AZ 85730
-                    </p>
-                    <div class="flex items-center gap-4 text-gray-500 border-t border-white/10 pt-4">
-                        <a href="#" class="hover:text-accent transition-colors" title="Location">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </a>
-                        <a href="tel:+11234567890" class="hover:text-accent transition-colors" title="Phone">
-                            <i class="fa-solid fa-phone"></i>
-                        </a>
-                        <a href="mailto:usa@bababroker.com" class="hover:text-accent transition-colors" title="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Australia -->
-                <div class="card fade-in group hover:border-accent cursor-pointer">
-                    <div
-                        class="w-full h-36 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5 overflow-hidden group-hover:bg-primary/20 transition-colors duration-300">
-                        <i
-                            class="fa-solid fa-building text-5xl text-primary/40 group-hover:text-primary/60 transition-colors duration-300"></i>
-                    </div>
-                    <p class="text-accent text-xs font-bold uppercase tracking-widest mb-1">Australia</p>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        21 Benalia Cres Marayong<br>2148
-                    </p>
-                    <div class="flex items-center gap-4 text-gray-500 border-t border-white/10 pt-4">
-                        <a href="#" class="hover:text-accent transition-colors" title="Location">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </a>
-                        <a href="tel:+611234567890" class="hover:text-accent transition-colors" title="Phone">
-                            <i class="fa-solid fa-phone"></i>
-                        </a>
-                        <a href="mailto:au@bababroker.com" class="hover:text-accent transition-colors" title="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- UK -->
-                <div class="card fade-in group hover:border-accent cursor-pointer">
-                    <div
-                        class="w-full h-36 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5 overflow-hidden group-hover:bg-primary/20 transition-colors duration-300">
-                        <i
-                            class="fa-solid fa-landmark text-5xl text-primary/40 group-hover:text-primary/60 transition-colors duration-300"></i>
-                    </div>
-                    <p class="text-accent text-xs font-bold uppercase tracking-widest mb-1">UK</p>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        18 Tuesday Market Place,<br>King's Lynn, Norfolk, PE30 1JW
-                    </p>
-                    <div class="flex items-center gap-4 text-gray-500 border-t border-white/10 pt-4">
-                        <a href="#" class="hover:text-accent transition-colors" title="Location">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </a>
-                        <a href="tel:+441234567890" class="hover:text-accent transition-colors" title="Phone">
-                            <i class="fa-solid fa-phone"></i>
-                        </a>
-                        <a href="mailto:uk@bababroker.com" class="hover:text-accent transition-colors" title="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- India -->
-                <div class="card fade-in group hover:border-accent cursor-pointer">
-                    <div
-                        class="w-full h-36 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5 overflow-hidden group-hover:bg-primary/20 transition-colors duration-300">
-                        <i
-                            class="fa-solid fa-archway text-5xl text-primary/40 group-hover:text-primary/60 transition-colors duration-300"></i>
-                    </div>
-                    <p class="text-accent text-xs font-bold uppercase tracking-widest mb-1">India</p>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        Bawani Nagar, Jaipur,<br>Rajasthan
-                    </p>
-                    <div class="flex items-center gap-4 text-gray-500 border-t border-white/10 pt-4">
-                        <a href="#" class="hover:text-accent transition-colors" title="Location">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </a>
-                        <a href="tel:+911234567890" class="hover:text-accent transition-colors" title="Phone">
-                            <i class="fa-solid fa-phone"></i>
-                        </a>
-                        <a href="mailto:india@bababroker.com" class="hover:text-accent transition-colors" title="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Our Offices Section End -->
+    <!-- WHY CHOOSE US Section End -->
 
     <!-- Contact us and Blog Section Start -->
     <section class="section contact-blog-section">
@@ -1520,6 +1275,57 @@
         <div class="h-1 w-[71.5%] mx-auto" style="background: var(--color-accent);"></div>
     </footer>
     <!-- Footer Section End -->
+
+    <!-- Welcome Promo Popup -->
+    <div id="promoModal" class="promo-overlay" onclick="closePromoOutside(event)">
+        <div class="promo-box">
+            <button class="promo-close" onclick="closePromo()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="promo-img-panel">
+                <div class="promo-img-inner">
+                    <div class="promo-img-placeholder">
+                        <i class="fa-solid fa-building text-white/20" style="font-size:5rem;"></i>
+                    </div>
+                    <div class="promo-img-badge">
+                        <p class="promo-badge-title">Your Final <span>Opportunity</span></p>
+                        <p class="promo-badge-sub">To own before it's too late</p>
+                    </div>
+                    <div class="promo-offer-bar">
+                        <p class="promo-offer-title"><i class="fa-solid fa-tag"></i> Spot Booking Offer</p>
+                        <p class="promo-offer-sub">Available on every booking — Offer valid till 31st March, 2026</p>
+                    </div>
+                </div>
+            </div>
+            <div class="promo-detail-panel">
+                <div class="promo-brand">
+                    <span class="promo-brand-icon"><i class="fa-solid fa-building-columns"></i></span>
+                    <span class="promo-brand-name">Baba <span class="text-accent">Broker</span></span>
+                </div>
+                <h2 class="promo-property-name">Premium <span class="text-accent">Properties</span><br>Across India</h2>
+                <p class="promo-property-loc"><i class="fa-solid fa-location-dot text-accent"></i> Delhi NCR &amp; Major
+                    Cities</p>
+                <p class="promo-property-desc">Homes designed to give more back to life's little luxuries. Verified
+                    listings, zero hidden charges.</p>
+                <div class="promo-stats">
+                    <div class="promo-stat">
+                        <strong>2 &amp; 3 BHK</strong>
+                        <small>Starting at ₹45L+</small>
+                    </div>
+                    <div class="promo-stat-divider"></div>
+                    <div class="promo-stat">
+                        <strong>RERA Verified</strong>
+                        <small>Ready Possession</small>
+                    </div>
+                </div>
+                <a href="./contact-us.html" class="promo-cta-btn" onclick="closePromo()">
+                    Enquire Now <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p class="promo-dont-show">
+                    <label><input type="checkbox" id="promoDontShow" onchange="promoDontShowToggle(this)"> Don't show
+                        again</label>
+                </p>
+            </div>
+        </div>
+    </div>
 
     <!-- Right Sidebar Drawer -->
     <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()"></div>

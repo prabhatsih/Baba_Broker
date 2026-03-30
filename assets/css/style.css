@@ -2947,7 +2947,8 @@ footer>* {
 
 /* ========== 5 Levels of Security Section ========== */
 .sec5-section {
-    padding: 80px 0;
+    height: 90vh;
+    align-items: center;
     background: var(--color-dark-2);
     overflow: hidden;
 }
@@ -2987,8 +2988,8 @@ footer>* {
 .sec5-track-wrap {
     overflow: hidden;
     /* fade edges */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    /* -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); */
 }
 
 /* The moving track */
@@ -3016,7 +3017,7 @@ footer>* {
 /* Individual card */
 .sec5-card {
     position: relative;
-    width: 280px;
+    width: 330px;
     flex-shrink: 0;
     background: var(--color-dark-3);
     border: 1px solid rgba(255, 255, 255, 0.07);
@@ -3487,4 +3488,40 @@ footer>* {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* ========== About Feature Cards (about-us2.html) — replaced by site .card pattern ========== */
+
+/* ========== Team Gallery Scroll (about-us2.html) ========== */
+@keyframes scrollLTR {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRTL {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.team-scroll-ltr {
+    animation: scrollLTR 28s linear infinite;
+}
+
+.team-scroll-rtl {
+    animation: scrollRTL 28s linear infinite;
+}
+
+.team-scroll-ltr:hover,
+.team-scroll-rtl:hover {
+    animation-play-state: paused;
 }
