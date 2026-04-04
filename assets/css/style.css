@@ -3525,3 +3525,45 @@ footer>* {
 .team-scroll-rtl:hover {
     animation-play-state: paused;
 }
+
+/* Partners Page CSS Start */
+.partner-track {
+    width: max-content;
+    animation: scrollPartners 25s linear infinite;
+}
+
+.partner-track:hover {
+    animation-play-state: paused;
+}
+
+.partner-logo {
+    height: 60px;
+    object-fit: contain;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes scrollPartners {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Partners Page CSS End */
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}

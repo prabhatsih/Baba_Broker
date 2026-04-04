@@ -371,3 +371,26 @@ function switchPropType(btn, type) {
     document.getElementById('propTypeImg').src = d.img;
     document.getElementById('propTypeImg').alt = d.title;
 }
+
+
+const track = document.getElementById("sliderTrack");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+let index = 0;
+const cardWidth = track.children[0].offsetWidth + 24; // 24 = gap
+
+nextBtn.addEventListener("click", () => {
+    if (index < track.children.length - 3) {
+        index++;
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+});
+
+prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+        index--;
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+});
+
