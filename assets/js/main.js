@@ -393,4 +393,3 @@ prevBtn.addEventListener("click", () => {
         track.style.transform = `translateX(-${index * cardWidth}px)`;
     }
 });
-
