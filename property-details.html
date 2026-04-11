@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auth - Baba Broker</title>
+    <title>Property Details - Baba Broker</title>
     <meta name="description"
         content="Baba Broker – Find your dream property. Buy, sell, and rent residential & commercial real estate." />
 
@@ -454,166 +454,180 @@
     </nav>
     <!-- Navbar Section End -->
 
-    <!-- Auth Section Start -->
-    <section class="min-h-screen grid lg:grid-cols-2">
+    <!-- Main Wrapper Section Start -->
+    <section class="bg-dark-2 py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
 
-        <!-- LEFT PANEL -->
-        <div
-            class="hidden lg:flex flex-col justify-center px-20 text-white bg-[linear-gradient(135deg,#0b1220_0%,#0f2a5c_50%,#1e40af_100%)]">
+            <!-- Back -->
+            <a href="#" class="text-sm text-gray-400 hover:text-accent flex items-center gap-2 mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Properties
+            </a>
 
-            <h1 class="text-5xl font-bold mb-6">
-                Baba <span class="text-accent">Broker</span>
-            </h1>
+            <!-- GRID -->
+            <div class="grid lg:grid-cols-3 gap-8">
 
-            <h2 class="text-3xl font-bold mb-4 leading-snug">
-                Build & Scale Your Real Estate Business Effortlessly
-            </h2>
+                <!-- LEFT CONTENT -->
+                <div class="lg:col-span-2 space-y-8">
 
-            <p class="text-gray-300 max-w-md leading-relaxed">
-                Manage properties, brokers, and clients on one powerful platform.
-                From listings to legal compliance — Baba Broker provides everything
-                you need to grow faster and close deals smarter.
-            </p>
+                    <!-- IMAGE -->
+                    <div class="card overflow-hidden">
+                        <img src="assets/img/property1.jpg" class="w-full h-[320px] object-cover rounded-xl" />
+                    </div>
 
-        </div>
+                    <!-- TABS -->
+                    <div class="flex flex-wrap gap-2 bg-dark-3 p-2 rounded-xl">
+                        <button class="px-4 py-2 rounded-lg bg-accent text-white text-sm">Overview</button>
+                        <button class="px-4 py-2 rounded-lg text-gray-400 text-sm">Financials</button>
+                        <button class="px-4 py-2 rounded-lg text-gray-400 text-sm">Risk</button>
+                        <button class="px-4 py-2 rounded-lg text-gray-400 text-sm">Investment</button>
+                    </div>
 
-        <!-- RIGHT PANEL (GLASS PREMIUM) -->
-        <div class="relative flex items-center justify-center px-6">
+                    <!-- TITLE -->
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full">UPCOMING</span>
+                            <span class="text-xs bg-white/10 px-3 py-1 rounded-full">Mixed Use</span>
+                        </div>
 
-            <!-- Background Glow -->
-            <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_25%_15%,rgba(30,64,175,0.35),transparent_45%),radial-gradient(circle_at_75%_85%,rgba(15,42,92,0.35),transparent_50%)]">
+                        <h2 class="text-2xl font-semibold">
+                            Sandalwood Plot in Royal Orchards
+                        </h2>
+
+                        <p class="text-gray-400 text-sm mt-1">
+                            <i class="fa-solid fa-location-dot mr-1"></i> Penukonda
+                        </p>
+
+                        <p class="text-accent text-xl font-bold mt-3">
+                            ₹373.43 <span class="text-sm text-gray-400">per unit</span>
+                        </p>
+                    </div>
+
+                    <!-- WHY INVEST -->
+                    <div class="card p-6">
+                        <h3 class="text-lg font-semibold mb-4">Why Invest in This Property?</h3>
+
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-chart-line text-accent mt-1"></i>
+                                <div>
+                                    <p class="font-semibold">Dual Returns</p>
+                                    <p class="text-gray-400">Appreciation + harvest returns</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-shield text-accent mt-1"></i>
+                                <div>
+                                    <p class="font-semibold">Government Licensed</p>
+                                    <p class="text-gray-400">Secure investment</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-leaf text-accent mt-1"></i>
+                                <div>
+                                    <p class="font-semibold">Fully Managed</p>
+                                    <p class="text-gray-400">Zero hassle investment</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-location-dot text-accent mt-1"></i>
+                                <div>
+                                    <p class="font-semibold">Strategic Location</p>
+                                    <p class="text-gray-400">Near industrial zones</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- PROJECT HIGHLIGHTS -->
+                    <div class="card p-6">
+                        <h3 class="text-lg font-semibold mb-4">Project Highlights</h3>
+
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li>✔ 145 acres farmland</li>
+                            <li>✔ Government licensed</li>
+                            <li>✔ 50,000+ saplings</li>
+                            <li>✔ 20+ years experience</li>
+                        </ul>
+                    </div>
+
+                    <!-- LOCKED SECTION -->
+                    <div class="card p-6 border border-dashed border-accent/30 text-center">
+                        <i class="fa-solid fa-lock text-accent text-2xl mb-3"></i>
+                        <p class="font-semibold">Financials & Risk Report Locked</p>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Sign up to unlock detailed insights
+                        </p>
+                        <button class="btn btn-accent">Sign Up to Unlock</button>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDEBAR (STICKY) -->
+                <div class="space-y-6">
+
+                    <div class="sticky top-28 space-y-6">
+
+                        <!-- INVEST CARD -->
+                        <div class="card p-6">
+
+                            <div class="flex justify-between mb-3">
+                                <p class="text-sm text-gray-400">Available Units</p>
+                                <span class="text-xs bg-accent/20 text-accent px-2 py-1 rounded">
+                                    100% Available
+                                </span>
+                            </div>
+
+                            <p class="text-xl font-semibold mb-4">80 / 80</p>
+
+                            <div class="space-y-3 text-sm">
+
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Price per Unit</span>
+                                    <span>₹373.43</span>
+                                </div>
+
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Min Investment</span>
+                                    <span>₹51,346</span>
+                                </div>
+
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Appreciation</span>
+                                    <span class="text-green-400">18%</span>
+                                </div>
+
+                            </div>
+
+                            <button class="btn btn-accent w-full mt-5">
+                                Sign Up to Invest
+                            </button>
+                        </div>
+
+                        <!-- CONTACT CARD -->
+                        <div class="card p-6 text-center">
+                            <p class="font-semibold mb-2">Get in Touch</p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Talk to our advisor
+                            </p>
+
+                            <button class="btn btn-primary w-full">
+                                Contact Us
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-
-            <!-- Glass Card -->
-            <div
-                class="relative w-full max-w-md rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] p-8">
-
-                <!-- TOGGLE -->
-                <div class="flex bg-white/10 rounded-xl p-1 mb-6">
-                    <button id="authLoginTab"
-                        class="flex-1 py-2 rounded-lg bg-accent text-white font-semibold transition">
-                        Login
-                    </button>
-                    <button id="authSignupTab" class="flex-1 py-2 rounded-lg text-gray-300 font-semibold transition">
-                        Sign Up
-                    </button>
-                </div>
-
-                <!-- LOGIN -->
-                <div id="authLoginSection">
-
-                    <h2 class="text-2xl font-bold text-center mb-2 text-white">
-                        Welcome Back
-                    </h2>
-
-                    <p class="text-gray-400 text-center mb-6 text-sm">
-                        Sign in to access exclusive real estate IPOs
-                    </p>
-
-                    <!-- Google -->
-                    <button
-                        class="w-full border border-white/10 bg-white/5 rounded-xl py-3 mb-4 flex items-center justify-center gap-2 hover:bg-white/10 transition">
-                        <i class="fa-brands fa-google"></i> Continue with Google
-                    </button>
-
-                    <div class="text-center text-gray-500 text-xs mb-4">
-                        OR CONTINUE WITH
-                    </div>
-
-                    <!-- PHONE / EMAIL -->
-                    <div class="flex gap-3 mb-4">
-                        <button id="authPhoneBtn" class="flex-1 bg-accent text-white py-2 rounded-xl font-semibold">
-                            Phone
-                        </button>
-                        <button id="authEmailBtn" class="flex-1 border border-white/10 py-2 rounded-xl text-gray-300">
-                            Email
-                        </button>
-                    </div>
-
-                    <!-- PHONE -->
-                    <div id="authPhoneInput" class="flex gap-2 mb-4">
-                        <input
-                            class="w-20 bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            value="+91">
-                        <input
-                            class="flex-1 bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            placeholder="9876543210">
-                    </div>
-
-                    <!-- EMAIL -->
-                    <div id="authEmailInput" class="hidden mb-4">
-                        <input
-                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            placeholder="your@email.com">
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button
-                        class="w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-xl font-semibold transition shadow-lg shadow-accent/20">
-                        Send OTP
-                    </button>
-
-                </div>
-
-                <!-- SIGNUP -->
-                <div id="authSignupSection" class="hidden text-white">
-
-                    <button id="authBackBtn" class="mb-4 text-gray-400 hover:text-white">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
-
-                    <h2 class="text-2xl font-bold mb-2">Create Account</h2>
-
-                    <p class="text-gray-400 mb-4">
-                        Step <span id="authStepNumber">1</span> of 4
-                    </p>
-
-                    <!-- PROGRESS -->
-                    <div class="flex gap-2 mb-6">
-                        <div class="authStepBar h-2 flex-1 bg-accent rounded-full"></div>
-                        <div class="authStepBar h-2 flex-1 bg-white/10 rounded-full"></div>
-                        <div class="authStepBar h-2 flex-1 bg-white/10 rounded-full"></div>
-                        <div class="authStepBar h-2 flex-1 bg-white/10 rounded-full"></div>
-                    </div>
-
-                    <!-- STEP 1 -->
-                    <div id="authStep1">
-                        <input class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-3 text-white"
-                            placeholder="Email Address">
-                        <input class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-3 text-white"
-                            placeholder="Phone Number">
-                        <button class="w-full bg-accent py-3 rounded-xl" onclick="authNextStep(2)">Continue</button>
-                    </div>
-
-                    <!-- STEP 2 -->
-                    <div id="authStep2" class="hidden">
-                        <input class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-3 text-white"
-                            placeholder="Full Name">
-                        <button class="w-full bg-accent py-3 rounded-xl" onclick="authNextStep(3)">Continue</button>
-                    </div>
-
-                    <!-- STEP 3 -->
-                    <div id="authStep3" class="hidden">
-                        <input class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-3 text-white"
-                            placeholder="Create Password">
-                        <button class="w-full bg-accent py-3 rounded-xl" onclick="authNextStep(4)">Continue</button>
-                    </div>
-
-                    <!-- STEP 4 -->
-                    <div id="authStep4" class="hidden">
-                        <button class="w-full bg-accent py-3 rounded-xl">
-                            Create Account
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
         </div>
-
     </section>
-    <!-- Auth Section End -->
+    <!-- Main Wrapper Section End -->
 
     <!-- Footer Section Start -->
     <footer class="relative pt-24 text-white mt-8 sm:mt-0" style="background:#070E13;">
@@ -1048,74 +1062,6 @@
         </div>
     </div>
     <!-- Get a Quote Modal Section End -->
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const loginTab = document.getElementById("authLoginTab");
-            const signupTab = document.getElementById("authSignupTab");
-
-            const loginSection = document.getElementById("authLoginSection");
-            const signupSection = document.getElementById("authSignupSection");
-
-            const phoneBtn = document.getElementById("authPhoneBtn");
-            const emailBtn = document.getElementById("authEmailBtn");
-
-            const phoneInput = document.getElementById("authPhoneInput");
-            const emailInput = document.getElementById("authEmailInput");
-
-            const backBtn = document.getElementById("authBackBtn");
-
-            if (!loginTab) return;
-
-            // Tabs
-            loginTab.onclick = () => {
-                loginSection.classList.remove("hidden");
-                signupSection.classList.add("hidden");
-
-                loginTab.classList.add("bg-accent", "text-white");
-                signupTab.classList.remove("bg-accent", "text-white");
-            };
-
-            signupTab.onclick = () => {
-                signupSection.classList.remove("hidden");
-                loginSection.classList.add("hidden");
-
-                signupTab.classList.add("bg-accent", "text-white");
-                loginTab.classList.remove("bg-accent", "text-white");
-            };
-
-            // Phone / Email
-            phoneBtn.onclick = () => {
-                phoneInput.classList.remove("hidden");
-                emailInput.classList.add("hidden");
-            };
-
-            emailBtn.onclick = () => {
-                emailInput.classList.remove("hidden");
-                phoneInput.classList.add("hidden");
-            };
-
-            // Back
-            backBtn.onclick = () => loginTab.click();
-
-            // Step Flow
-            window.authNextStep = function (step) {
-                ["authStep1", "authStep2", "authStep3", "authStep4"].forEach(id => {
-                    document.getElementById(id).classList.add("hidden");
-                });
-
-                document.getElementById("authStep" + step).classList.remove("hidden");
-                document.getElementById("authStepNumber").innerText = step;
-
-                document.querySelectorAll(".authStepBar").forEach((bar, i) => {
-                    bar.classList.toggle("bg-accent", i < step);
-                    bar.classList.toggle("bg-gray-200", i >= step);
-                });
-            };
-
-        });
-    </script>
 
     <script src="assets/js/main.js"></script>
 </body>

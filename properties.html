@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auth - Baba Broker</title>
+    <title>Properties - Baba Broker</title>
     <meta name="description"
         content="Baba Broker – Find your dream property. Buy, sell, and rent residential & commercial real estate." />
 
@@ -454,166 +454,383 @@
     </nav>
     <!-- Navbar Section End -->
 
-    <!-- Auth Section Start -->
-    <section class="min-h-screen grid lg:grid-cols-2">
+    <!-- Hero Section Start -->
+    <section class="hero-section py-20 flex items-center">
 
-        <!-- LEFT PANEL -->
-        <div
-            class="hidden lg:flex flex-col justify-center px-20 text-white bg-[linear-gradient(135deg,#0b1220_0%,#0f2a5c_50%,#1e40af_100%)]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
 
-            <h1 class="text-5xl font-bold mb-6">
-                Baba <span class="text-accent">Broker</span>
-            </h1>
-
-            <h2 class="text-3xl font-bold mb-4 leading-snug">
-                Build & Scale Your Real Estate Business Effortlessly
-            </h2>
-
-            <p class="text-gray-300 max-w-md leading-relaxed">
-                Manage properties, brokers, and clients on one powerful platform.
-                From listings to legal compliance — Baba Broker provides everything
-                you need to grow faster and close deals smarter.
-            </p>
-
-        </div>
-
-        <!-- RIGHT PANEL (GLASS PREMIUM) -->
-        <div class="relative flex items-center justify-center px-6">
-
-            <!-- Background Glow -->
+            <!-- Tag -->
             <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_25%_15%,rgba(30,64,175,0.35),transparent_45%),radial-gradient(circle_at_75%_85%,rgba(15,42,92,0.35),transparent_50%)]">
+                class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full text-sm mb-6 fade-in">
+                <i class="fa-solid fa-building text-accent"></i>
+                Investment Opportunities
             </div>
 
-            <!-- Glass Card -->
-            <div
-                class="relative w-full max-w-md rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] p-8">
+            <!-- Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 fade-in">
+                Discover Premium Real Estate <br />
+                Investments
+            </h1>
 
-                <!-- TOGGLE -->
-                <div class="flex bg-white/10 rounded-xl p-1 mb-6">
-                    <button id="authLoginTab"
-                        class="flex-1 py-2 rounded-lg bg-accent text-white font-semibold transition">
-                        Login
-                    </button>
-                    <button id="authSignupTab" class="flex-1 py-2 rounded-lg text-gray-300 font-semibold transition">
-                        Sign Up
-                    </button>
+            <!-- Subtext -->
+            <p class="text-white/80 max-w-2xl mb-10 text-lg fade-in">
+                Invest in tokenized real estate properties with fractional ownership.
+                Access exclusive opportunities, transparent returns, and professional management.
+            </p>
+
+            <!-- Search -->
+            <div class="max-w-2xl fade-in">
+                <div class="flex items-center bg-white rounded-full px-5 py-3 shadow-xl">
+
+                    <i class="fa-solid fa-magnifying-glass text-gray-400 mr-3"></i>
+
+                    <input id="searchInput" type="text" placeholder="Search by property name, location, or type..."
+                        class="w-full text-gray-700 outline-none text-sm" />
+                </div>
+            </div>
+
+            <!-- Filter -->
+            <div class="flex items-center gap-4 mt-6 fade-in">
+                <button
+                    class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-filter text-accent"></i>
+                    Filters
+                </button>
+
+                <span id="resultCount" class="text-white/80 text-sm">
+                    2 properties available
+                </span>
+            </div>
+
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Listed Properties Section Start -->
+    <section class="section bg-dark-2" id="propertySection">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+
+            <!-- Tabs -->
+            <div class="flex items-center gap-4 mb-8">
+                <button class="bg-white text-dark px-4 py-2 rounded-lg text-sm font-medium">
+                    <i class="fa-solid fa-building mr-2"></i> Initial Offering
+                </button>
+                <span class="text-gray-400 text-sm">QOIN</span>
+            </div>
+
+            <!-- Cards -->
+            <div id="propertyGrid" class="grid md:grid-cols-2 gap-8">
+
+                <!-- CARD 1 -->
+                <div class="card property-card" data-name="Sandalwood Plot" data-location="Penukonda"
+                    data-type="Mixed Use">
+
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="assets/img/property1.jpg" class="w-full h-56 object-cover" />
+
+                        <span class="absolute top-3 right-3 bg-accent text-white text-xs px-3 py-1 rounded-full">
+                            upcoming
+                        </span>
+
+                        <span class="absolute bottom-3 left-3 bg-white text-dark text-xs px-3 py-1 rounded-full">
+                            Mixed Use
+                        </span>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold mb-1">
+                            Sandalwood Plot in Royal Orchards
+                        </h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            <i class="fa-solid fa-location-dot mr-1"></i> Penukonda
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-gray-400">Min Investment</p>
+                                <p class="font-semibold text-lg">₹ 51.3K</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">Capital Appreciation</p>
+                                <p class="text-green-400 font-semibold">↑ 18%</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-sm">
+                            <p class="text-gray-400">Funding Progress</p>
+                            <div class="w-full bg-gray-700 h-2 rounded-full mt-1">
+                                <div class="bg-accent h-2 rounded-full w-[20%]"></div>
+                            </div>
+                        </div>
+
+                        <a href="./property-details.html" class="btn btn-accent w-full mt-5">
+                            View Details →
+                        </a>
+                    </div>
                 </div>
 
-                <!-- LOGIN -->
-                <div id="authLoginSection">
+                <!-- CARD 2 -->
+                <div class="card property-card" data-name="Dholera Plot" data-location="Dholera Expressway"
+                    data-type="Residential">
 
-                    <h2 class="text-2xl font-bold text-center mb-2 text-white">
-                        Welcome Back
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="assets/img/property2.jpg" class="w-full h-56 object-cover" />
+
+                        <span class="absolute top-3 right-3 bg-accent text-white text-xs px-3 py-1 rounded-full">
+                            sold out
+                        </span>
+
+                        <span class="absolute bottom-3 left-3 bg-white text-dark text-xs px-3 py-1 rounded-full">
+                            Residential Plot
+                        </span>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold mb-1">
+                            A Plot in Dholera Expressway City Township
+                        </h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            <i class="fa-solid fa-location-dot mr-1"></i> Dholera Expressway
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-gray-400">Min Investment</p>
+                                <p class="font-semibold text-lg">₹ 5.0K</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">Capital Appreciation</p>
+                                <p class="text-green-400 font-semibold">↑ 28%</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-sm">
+                            <p class="text-gray-400">Funding Progress</p>
+                            <div class="w-full bg-gray-700 h-2 rounded-full mt-1">
+                                <div class="bg-accent h-2 rounded-full w-full"></div>
+                            </div>
+                        </div>
+
+                        <a href="./property-details.html" class="btn btn-accent w-full mt-5">
+                            View Details →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Listed Properties Section End -->
+
+    <!-- Contact us and Blog Section Start -->
+    <section class="section contact-blog-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+                <!-- LEFT: Contact Form -->
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-1">Contact
+                        <span class="text-accent">Us</span>
                     </h2>
+                    <p class="text-accent font-medium mb-1">Apply to get a call for solution</p>
+                    <p class="text-gray-400 text-sm mb-6">Submit the form to connect with our property expert —
+                        completely free.</p>
 
-                    <p class="text-gray-400 text-center mb-6 text-sm">
-                        Sign in to access exclusive real estate IPOs
-                    </p>
+                    <div class="card space-y-4">
 
-                    <!-- Google -->
-                    <button
-                        class="w-full border border-white/10 bg-white/5 rounded-xl py-3 mb-4 flex items-center justify-center gap-2 hover:bg-white/10 transition">
-                        <i class="fa-brands fa-google"></i> Continue with Google
-                    </button>
+                        <div class="flex rounded-xl overflow-hidden border border-white/10">
+                            <span class="bg-primary px-4 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user text-white"></i>
+                            </span>
+                            <input type="text" placeholder="Your Name"
+                                class="flex-1 bg-dark-3 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 min-w-0" />
+                        </div>
 
-                    <div class="text-center text-gray-500 text-xs mb-4">
-                        OR CONTINUE WITH
+                        <div class="flex rounded-xl overflow-hidden border border-white/10">
+                            <span class="bg-primary px-4 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope text-white"></i>
+                            </span>
+                            <input type="email" placeholder="Your Email"
+                                class="flex-1 bg-dark-3 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 min-w-0" />
+                        </div>
+
+                        <div class="flex rounded-xl overflow-hidden border border-white/10">
+                            <span class="bg-primary px-4 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone text-white"></i>
+                            </span>
+                            <input type="tel" placeholder="Your Phone Number"
+                                class="flex-1 bg-dark-3 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 min-w-0" />
+                        </div>
+
+                        <div>
+                            <h6 class="font-semibold text-base mb-3">What Can We Do For You?</h6>
+                            <div class="overflow-hidden pb-1">
+                                <div class="service-tag-track">
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-house text-accent"></i>
+                                        Property Buying
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-tag text-accent"></i>
+                                        Property Selling
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-key text-accent"></i>
+                                        Rental Management
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-chart-pie text-accent"></i>
+                                        Investment Advisory
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-house text-accent"></i>
+                                        Property Buying
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-tag text-accent"></i>
+                                        Property Selling
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-key text-accent"></i>
+                                        Rental Management
+                                    </button>
+                                    <button type="button" class="service-tag">
+                                        <i class="fa-solid fa-chart-pie text-accent"></i>
+                                        Investment Advisory
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex rounded-xl overflow-hidden border border-white/10">
+                            <span class="bg-primary px-4 flex items-start justify-center pt-3 shrink-0">
+                                <i class="fa-solid fa-comment text-white"></i>
+                            </span>
+                            <textarea rows="4" placeholder="Your Message"
+                                class="flex-1 bg-dark-3 px-4 py-3 text-sm focus:outline-none placeholder-gray-500 resize-none min-w-0"></textarea>
+                        </div>
+
+                        <div class="text-center sm:text-right">
+                            <button type="submit" class="btn btn-accent px-8 rounded-full font-semibold">
+                                Submit <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
                     </div>
-
-                    <!-- PHONE / EMAIL -->
-                    <div class="flex gap-3 mb-4">
-                        <button id="authPhoneBtn" class="flex-1 bg-accent text-white py-2 rounded-xl font-semibold">
-                            Phone
-                        </button>
-                        <button id="authEmailBtn" class="flex-1 border border-white/10 py-2 rounded-xl text-gray-300">
-                            Email
-                        </button>
-                    </div>
-
-                    <!-- PHONE -->
-                    <div id="authPhoneInput" class="flex gap-2 mb-4">
-                        <input
-                            class="w-20 bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            value="+91">
-                        <input
-                            class="flex-1 bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            placeholder="9876543210">
-                    </div>
-
-                    <!-- EMAIL -->
-                    <div id="authEmailInput" class="hidden mb-4">
-                        <input
-                            class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/40"
-                            placeholder="your@email.com">
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button
-                        class="w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-xl font-semibold transition shadow-lg shadow-accent/20">
-                        Send OTP
-                    </button>
-
                 </div>
 
-                <!-- SIGNUP -->
-                <div id="authSignupSection" class="hidden text-white">
-
-                    <button id="authBackBtn" class="mb-4 text-gray-400 hover:text-white">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
-
-                    <h2 class="text-2xl font-bold mb-2">Create Account</h2>
-
-                    <p class="text-gray-400 mb-4">
-                        Step <span id="authStepNumber">1</span> of 4
-                    </p>
-
-                    <!-- PROGRESS -->
-                    <div class="flex gap-2 mb-6">
-                        <div class="authStepBar h-2 flex-1 bg-accent rounded-full"></div>
-                        <div class="authStepBar h-2 flex-1 bg-white/10 rounded-full"></div>
-                        <div class="authStepBar h-2 flex-1 bg-white/10 rounded-full"></div>
-                        <div class="authStepBar h-2 flex-1 bg-white/10 rounded-full"></div>
+                <!-- RIGHT: Blog -->
+                <div>
+                    <div class="mb-5 text-center lg:text-left">
+                        <small class="text-accent uppercase tracking-widest font-semibold text-xs">Blog</small>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-primary mt-1">LATEST BLOGS</h2>
+                        <p class="text-gray-400 text-sm mt-2">
+                            Stay updated with real estate trends, tips, and market insights.
+                        </p>
                     </div>
 
-                    <!-- STEP 1 -->
-                    <div id="authStep1">
-                        <input class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-3 text-white"
-                            placeholder="Email Address">
-                        <input class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-3 text-white"
-                            placeholder="Phone Number">
-                        <button class="w-full bg-accent py-3 rounded-xl" onclick="authNextStep(2)">Continue</button>
-                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:h-[510px] overflow-auto pt-1"
+                        style="scrollbar-width: none;">
 
-                    <!-- STEP 2 -->
-                    <div id="authStep2" class="hidden">
-                        <input class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-3 text-white"
-                            placeholder="Full Name">
-                        <button class="w-full bg-accent py-3 rounded-xl" onclick="authNextStep(3)">Continue</button>
-                    </div>
+                        <div class="blog-card fade-in h-max">
+                            <div class="blog-card-img">
+                                <div class="blog-img-placeholder">
+                                    <!-- <i class="fa-solid fa-city text-4xl text-primary/30"></i> -->
+                                    <img src="./assets/img/blog1.webp" alt="blog1" class="object-fill">
+                                </div>
+                                <span class="blog-badge">15 Jan 2026</span>
+                            </div>
+                            <div class="p-4">
+                                <h6 class="font-semibold text-sm mb-2 leading-snug">
+                                    Top 5 Localities to Invest in Real Estate This Year
+                                </h6>
+                                <p class="text-gray-400 text-xs mb-4 leading-relaxed">
+                                    Discover the fastest-growing neighbourhoods offering the best ROI for property
+                                    investors in 2026.
+                                </p>
+                                <div class="flex justify-between items-center text-xs border-t border-white/10 pt-3">
+                                    <a href="#" class="text-accent hover:underline">View More</a>
+                                    <span class="text-gray-500">By Admin</span>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- STEP 3 -->
-                    <div id="authStep3" class="hidden">
-                        <input class="w-full bg-white/5 border border-white/10 p-3 rounded-xl mb-3 text-white"
-                            placeholder="Create Password">
-                        <button class="w-full bg-accent py-3 rounded-xl" onclick="authNextStep(4)">Continue</button>
-                    </div>
+                        <div class="blog-card fade-in h-max">
+                            <div class="blog-card-img">
+                                <div class="blog-img-placeholder">
+                                    <!-- <i class="fa-solid fa-house-circle-check text-4xl text-primary/30"></i> -->
+                                    <img src="./assets/img/blog2.webp" alt="blog2" class="object-fill">
+                                </div>
+                                <span class="blog-badge">02 Feb 2026</span>
+                            </div>
+                            <div class="p-4">
+                                <h6 class="font-semibold text-sm mb-2 leading-snug">
+                                    First-Time Buyer's Guide: What You Must Know
+                                </h6>
+                                <p class="text-gray-400 text-xs mb-4 leading-relaxed">
+                                    Buying your first home can be overwhelming. Here's a step-by-step guide to make it
+                                    stress-free.
+                                </p>
+                                <div class="flex justify-between items-center text-xs border-t border-white/10 pt-3">
+                                    <a href="#" class="text-accent hover:underline">View More</a>
+                                    <span class="text-gray-500">By Admin</span>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- STEP 4 -->
-                    <div id="authStep4" class="hidden">
-                        <button class="w-full bg-accent py-3 rounded-xl">
-                            Create Account
-                        </button>
-                    </div>
+                        <div class="blog-card fade-in h-max">
+                            <div class="blog-card-img">
+                                <div class="blog-img-placeholder">
+                                    <!-- <i class="fa-solid fa-chart-line text-4xl text-primary/30"></i> -->
+                                    <img src="./assets/img/blog3.webp" alt="blog3" class="object-fill">
+                                </div>
+                                <span class="blog-badge">10 Mar 2026</span>
+                            </div>
+                            <div class="p-4">
+                                <h6 class="font-semibold text-sm mb-2 leading-snug">
+                                    How to Get the Best Price When Selling Your Property
+                                </h6>
+                                <p class="text-gray-400 text-xs mb-4 leading-relaxed">
+                                    Expert tips on staging, pricing, and marketing your property to attract serious
+                                    buyers fast.
+                                </p>
+                                <div class="flex justify-between items-center text-xs border-t border-white/10 pt-3">
+                                    <a href="#" class="text-accent hover:underline">View More</a>
+                                    <span class="text-gray-500">By Admin</span>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="blog-card fade-in h-max">
+                            <div class="blog-card-img">
+                                <div class="blog-img-placeholder">
+                                    <!-- <i class="fa-solid fa-file-contract text-4xl text-primary/30"></i> -->
+                                    <img src="./assets/img/blog4.webp" alt="blog4" class="object-fill">
+                                </div>
+                                <span class="blog-badge">18 Mar 2026</span>
+                            </div>
+                            <div class="p-4">
+                                <h6 class="font-semibold text-sm mb-2 leading-snug">
+                                    Understanding RERA: Rights Every Property Buyer Has
+                                </h6>
+                                <p class="text-gray-400 text-xs mb-4 leading-relaxed">
+                                    RERA protects homebuyers from fraud and delays. Know your rights before signing any
+                                    agreement.
+                                </p>
+                                <div class="flex justify-between items-center text-xs border-t border-white/10 pt-3">
+                                    <a href="#" class="text-accent hover:underline">View More</a>
+                                    <span class="text-gray-500">By Admin</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
         </div>
 
     </section>
-    <!-- Auth Section End -->
+    <!-- Contact us and Blog Section End -->
 
     <!-- Footer Section Start -->
     <footer class="relative pt-24 text-white mt-8 sm:mt-0" style="background:#070E13;">
@@ -1050,70 +1267,28 @@
     <!-- Get a Quote Modal Section End -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.property-card');
+        const resultCount = document.getElementById('resultCount');
 
-            const loginTab = document.getElementById("authLoginTab");
-            const signupTab = document.getElementById("authSignupTab");
+        searchInput.addEventListener('input', function () {
+            const value = this.value.toLowerCase();
+            let visible = 0;
 
-            const loginSection = document.getElementById("authLoginSection");
-            const signupSection = document.getElementById("authSignupSection");
+            cards.forEach(card => {
+                const name = card.dataset.name.toLowerCase();
+                const location = card.dataset.location.toLowerCase();
+                const type = card.dataset.type.toLowerCase();
 
-            const phoneBtn = document.getElementById("authPhoneBtn");
-            const emailBtn = document.getElementById("authEmailBtn");
+                if (name.includes(value) || location.includes(value) || type.includes(value)) {
+                    card.style.display = 'block';
+                    visible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
 
-            const phoneInput = document.getElementById("authPhoneInput");
-            const emailInput = document.getElementById("authEmailInput");
-
-            const backBtn = document.getElementById("authBackBtn");
-
-            if (!loginTab) return;
-
-            // Tabs
-            loginTab.onclick = () => {
-                loginSection.classList.remove("hidden");
-                signupSection.classList.add("hidden");
-
-                loginTab.classList.add("bg-accent", "text-white");
-                signupTab.classList.remove("bg-accent", "text-white");
-            };
-
-            signupTab.onclick = () => {
-                signupSection.classList.remove("hidden");
-                loginSection.classList.add("hidden");
-
-                signupTab.classList.add("bg-accent", "text-white");
-                loginTab.classList.remove("bg-accent", "text-white");
-            };
-
-            // Phone / Email
-            phoneBtn.onclick = () => {
-                phoneInput.classList.remove("hidden");
-                emailInput.classList.add("hidden");
-            };
-
-            emailBtn.onclick = () => {
-                emailInput.classList.remove("hidden");
-                phoneInput.classList.add("hidden");
-            };
-
-            // Back
-            backBtn.onclick = () => loginTab.click();
-
-            // Step Flow
-            window.authNextStep = function (step) {
-                ["authStep1", "authStep2", "authStep3", "authStep4"].forEach(id => {
-                    document.getElementById(id).classList.add("hidden");
-                });
-
-                document.getElementById("authStep" + step).classList.remove("hidden");
-                document.getElementById("authStepNumber").innerText = step;
-
-                document.querySelectorAll(".authStepBar").forEach((bar, i) => {
-                    bar.classList.toggle("bg-accent", i < step);
-                    bar.classList.toggle("bg-gray-200", i >= step);
-                });
-            };
-
+            resultCount.textContent = `${visible} properties available`;
         });
     </script>
 
